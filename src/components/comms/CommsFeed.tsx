@@ -1,18 +1,18 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { commsFeed } from "@/lib/mockData";
+import type { CommsFeedItem } from "@/types";
 import { MediaEmbed } from "@/components/comms/MediaEmbed";
 
-export function CommsFeed() {
+export function CommsFeed({ items }: { items: CommsFeedItem[] }) {
   const [kind, setKind] = useState<"all" | "video" | "x_space" | "article">("all");
 
   const filtered = useMemo(() => {
     if (kind === "all") {
-      return commsFeed;
+      return items;
     }
-    return commsFeed.filter((item) => item.kind === kind);
-  }, [kind]);
+    return items.filter((item) => item.kind === kind);
+  }, [items, kind]);
 
   return (
     <section className="space-y-4">

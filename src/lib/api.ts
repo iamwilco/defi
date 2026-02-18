@@ -1,4 +1,12 @@
-import type { BlogPost, CoalitionEntity, Incentive, TVLResponse, UtilizationResponse } from "@/types";
+import type {
+  BlogPost,
+  CoalitionEntity,
+  CommsFeedItem,
+  GuideEntry,
+  Incentive,
+  TVLResponse,
+  UtilizationResponse,
+} from "@/types";
 
 async function fetcher<T>(url: string): Promise<T> {
   const response = await fetch(url, { next: { revalidate: 300 } });
@@ -26,4 +34,12 @@ export function getBlogPosts() {
 
 export function getEntities() {
   return fetcher<{ entities: CoalitionEntity[] }>("/api/entities");
+}
+
+export function getCommsFeed() {
+  return fetcher<{ items: CommsFeedItem[] }>("/api/comms");
+}
+
+export function getGuides() {
+  return fetcher<{ guides: GuideEntry[] }>("/api/guides");
 }

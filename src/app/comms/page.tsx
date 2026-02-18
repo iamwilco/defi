@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CommsFeed } from "@/components/comms/CommsFeed";
+import { CommsDataSection } from "@/components/comms/CommsDataSection";
 
 export const metadata: Metadata = {
   title: "Communications | USDM Coalition",
@@ -34,7 +34,7 @@ export default function CommsPage() {
         </article>
       </section>
 
-      <CommsFeed />
+      <CommsDataSection />
     </div>
   );
 }

@@ -3,6 +3,8 @@ import type {
   BlogPost,
   CoalitionContribution,
   CoalitionEntity,
+  CommsFeedItem,
+  GuideEntry,
   HeatmapCell,
   Incentive,
   TimelineMilestone,
@@ -72,6 +74,30 @@ export const incentives: Incentive[] = [
   },
 ];
 
+export const guidesCatalog: GuideEntry[] = [
+  {
+    id: "mint-fluid",
+    title: "Mint to Fluid Journey",
+    body: "Mint USDM on NBX, transfer to wallet, and lend on Fluid. Video walkthrough placeholder included.",
+    steps: ["Mint USDM on NBX", "Move funds to a supported wallet", "Supply USDM to Fluid"],
+    mediaLabel: "Video Placeholder: Mint to Fluid Walkthrough",
+  },
+  {
+    id: "fgld-flow",
+    title: "fGLD Flow: Buy gold on NBX, lend on Fluid",
+    body: "Acquire fGLD on NBX, deposit into Fluid markets, and monitor utilization/risk limits.",
+    steps: ["Acquire fGLD on NBX", "Supply fGLD to lending market", "Monitor utilization and rates"],
+    mediaLabel: "Diagram Placeholder: NBX -> Fluid fGLD Flow",
+  },
+  {
+    id: "starter",
+    title: "USDM Starter Loop",
+    body: "Beginner path for stablecoin entry, lending setup, and campaign eligibility checks.",
+    steps: ["Understand campaign terms", "Start with small test position", "Track rewards weekly"],
+    mediaLabel: "Checklist Placeholder: Beginner onboarding",
+  },
+];
+
 export const blogPosts: BlogPost[] = [
   {
     slug: "month-1-review",
@@ -138,14 +164,7 @@ export const timeline: TimelineMilestone[] = [
   },
 ];
 
-export const commsFeed: Array<{
-  id: string;
-  kind: "video" | "x_space" | "article";
-  title: string;
-  description: string;
-  href: string;
-  date: string;
-}> = [
+export const commsFeed: CommsFeedItem[] = [
   {
     id: "mint-fluid-video",
     kind: "video",
