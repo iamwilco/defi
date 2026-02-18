@@ -6,6 +6,7 @@ import type {
   HeatmapCell,
   Incentive,
   TimelineMilestone,
+  TvlHistoryPoint,
 } from "@/types";
 
 export const coalitionContributions: CoalitionContribution[] = [
@@ -172,6 +173,16 @@ export const entities: CoalitionEntity[] = [
     website: "https://lenfi.io",
     role: "Lending Partner",
   },
+];
+
+export const tvlHistory: TvlHistoryPoint[] = [
+  { date: "2026-02-01", total: 62100, transactions: 144 },
+  { date: "2026-02-03", total: 70450, transactions: 190 },
+  { date: "2026-02-05", total: 76820, transactions: 232 },
+  { date: "2026-02-07", total: 83900, transactions: 281 },
+  { date: "2026-02-09", total: 90110, transactions: 325 },
+  { date: "2026-02-11", total: 96400, transactions: 388 },
+  { date: "2026-02-13", total: 100500, transactions: 421 },
 ];
 
 export const totalTVL = coalitionContributions.reduce((sum, item) => sum + item.tvl, 0);

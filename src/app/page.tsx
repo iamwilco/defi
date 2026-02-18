@@ -1,9 +1,11 @@
 import { ContributionsTable } from "@/components/dashboard/ContributionsTable";
 import { ClientChartsSection } from "@/components/dashboard/ClientChartsSection";
+import { GrowthWindowCard } from "@/components/dashboard/GrowthWindowCard";
 import { HeroSection } from "@/components/dashboard/HeroSection";
 import { IncentivesOverview } from "@/components/dashboard/IncentivesOverview";
 import { ProofOfReserves } from "@/components/dashboard/ProofOfReserves";
 import { UtilizationHeatmap } from "@/components/dashboard/UtilizationHeatmap";
+import { ApiStatusCard } from "@/components/dashboard/ApiStatusCard";
 import { DashboardCard } from "@/components/shared/DashboardCard";
 
 export default function Home() {
@@ -12,6 +14,16 @@ export default function Home() {
       <HeroSection />
 
       <ClientChartsSection />
+
+      <section className="grid gap-4 xl:grid-cols-2">
+        <DashboardCard title="Growth Window Insights">
+          <GrowthWindowCard />
+        </DashboardCard>
+
+        <DashboardCard title="Live Endpoint Status">
+          <ApiStatusCard />
+        </DashboardCard>
+      </section>
 
       <section className="grid gap-4 xl:grid-cols-2">
         <DashboardCard title="Coalition Contributions">

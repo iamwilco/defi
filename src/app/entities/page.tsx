@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EntityCard } from "@/components/entities/EntityCard";
+import { EntitiesGrid } from "@/components/entities/EntitiesGrid";
 import { entities } from "@/lib/mockData";
 
 export const metadata: Metadata = {
@@ -15,11 +15,7 @@ export default function EntitiesPage() {
         <p className="mt-2 text-slate-300">NBX, Fluid, Moneta/W3I, Wave and partners powering Proof of Growth.</p>
       </header>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        {entities.map((entity) => (
-          <EntityCard key={entity.id} entity={entity} />
-        ))}
-      </div>
+      <EntitiesGrid entities={entities} />
 
       <section className="rounded-2xl border border-white/10 bg-slate-900/70 p-5 text-sm text-slate-300">
         <h2 className="text-lg font-semibold text-slate-100">Joining / Leaving</h2>

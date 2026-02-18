@@ -38,3 +38,9 @@ export interface UtilizationResponse {
   assets: AssetUtilization[];
   heatmap: HeatmapCell[];
 }
+
+export interface TvlHistoryPoint {
+  date: string;
+  total: number;
+  transactions: number;
+}
