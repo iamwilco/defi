@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { BlogDataSection } from "@/components/blog/BlogDataSection";
+import { ClientPhasesInfographic } from "@/components/blog/ClientPhasesInfographic";
 import { DeFiPulseTimeline } from "@/components/blog/DeFiPulseTimeline";
 import { FourteenDaysRecap } from "@/components/blog/FourteenDaysRecap";
-import { PhasesInfographic } from "@/components/blog/PhasesInfographic";
 import { fourteenDayRecap, timeline } from "@/lib/mockData";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function BlogPage() {
       <BlogDataSection />
 
       <section className="grid gap-4 xl:grid-cols-2">
-        <PhasesInfographic milestones={timeline} />
+        <ClientPhasesInfographic milestones={timeline} />
         <FourteenDaysRecap highlights={fourteenDayRecap} />
       </section>
 

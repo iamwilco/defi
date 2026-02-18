@@ -91,7 +91,7 @@
 - [ ] **FB-084** Fix any Lighthouse a11y issues (contrast, labels, heading order)
 - [ ] **FB-085** Fix any Lighthouse performance issues (LCP, CLS, FID)
 - [ ] **FB-086** Keyboard navigation test: verify all interactive elements are reachable and operable via keyboard
-- [ ] **FB-087** Add `loading="lazy"` or Suspense boundaries to heavy sections not yet deferred
+- [x] **FB-087** Add `loading="lazy"` or Suspense boundaries to heavy sections not yet deferred
 
 ### 3B: Security Hardening
 

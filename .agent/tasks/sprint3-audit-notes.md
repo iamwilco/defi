@@ -41,3 +41,15 @@ Action:
 
 - Lighthouse items `FB-083` to `FB-086` remain pending until Chrome is available in the environment.
 - Recommended local rerun once Chrome is installed.
+
+## 3) Performance Deferral Follow-up
+
+Completed in-repo optimization:
+
+- Added client-side deferred loading wrapper for blog phase chart:
+  - `src/components/blog/ClientPhasesInfographic.tsx`
+  - `src/app/blog/page.tsx` now uses this wrapper
+
+Result:
+
+- `FB-087` can be considered complete for currently identified heavy chart sections.
