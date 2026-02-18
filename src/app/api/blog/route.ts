@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
-import { blogPosts } from "@/lib/mockData";
+import { getDataProvider } from "@/lib/providers";
 
 export async function GET() {
   try {
-    return NextResponse.json({ posts: blogPosts });
+    const provider = getDataProvider();
+    const payload = await provider.getBlogPosts();
+    return NextResponse.json(payload);
   } catch {
     return NextResponse.json(
       {

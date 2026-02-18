@@ -4,7 +4,14 @@
   --background: #020617;
   --foreground: #e2e8f0;
   --card: #0f172acc;
+  --surface: #0f172a;
+  --surface-soft: #111d34;
+  --surface-muted: #1e293b;
   --border: #ffffff1a;
+  --border-strong: #ffffff2e;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 }
 
 @theme inline {
@@ -20,14 +27,28 @@
   --background: #020617;
   --foreground: #e2e8f0;
   --card: #0f172acc;
+  --surface: #0f172a;
+  --surface-soft: #111d34;
+  --surface-muted: #1e293b;
   --border: #ffffff1a;
+  --border-strong: #ffffff2e;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 }
 
 html:not(.dark) {
   --background: #f8fafc;
   --foreground: #0f172a;
   --card: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #f1f5f9;
+  --surface-muted: #e2e8f0;
   --border: #cbd5e1;
+  --border-strong: #94a3b8;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
 }
 
 body {

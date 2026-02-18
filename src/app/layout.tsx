@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <div className="min-h-screen bg-slate-950 text-slate-100">
+          <div className="min-h-screen bg-background text-foreground">
             <Navbar />
             <div className="mx-auto flex w-full max-w-7xl">
               <Sidebar />

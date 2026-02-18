@@ -10,9 +10,9 @@ export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-[color:var(--surface)]/90 backdrop-blur">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="text-sm font-semibold tracking-wide text-slate-100">
+        <Link href="/" className="text-sm font-semibold tracking-wide text-foreground">
           USDM Coalition Dashboard
         </Link>
 
@@ -21,7 +21,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-slate-300 transition hover:text-blue-300"
+              className="text-sm text-[color:var(--text-secondary)] transition hover:text-blue-500"
             >
               {item.label}
             </Link>
@@ -35,7 +35,7 @@ export function Navbar() {
             type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
-            className="rounded-md border border-white/20 bg-slate-900 p-2 text-slate-200"
+            className="rounded-md border border-border bg-card p-2 text-foreground"
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -43,14 +43,14 @@ export function Navbar() {
       </div>
 
       {menuOpen ? (
-        <nav className="border-t border-white/10 bg-slate-950 px-4 py-3 md:hidden" aria-label="Mobile navigation">
+        <nav className="border-t border-border bg-[color:var(--surface)] px-4 py-3 md:hidden" aria-label="Mobile navigation">
           <ul className="space-y-2">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className="block rounded-md px-2 py-2 text-sm text-slate-300 transition hover:bg-slate-900 hover:text-blue-300"
+                  className="block rounded-md px-2 py-2 text-sm text-[color:var(--text-secondary)] transition hover:bg-[color:var(--surface-soft)] hover:text-blue-500"
                 >
                   {item.label}
                 </Link>

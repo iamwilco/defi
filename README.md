@@ -41,6 +41,9 @@ Defined in `.env.example`:
   - Reserved for future live chain integrations
 - `NEXT_PUBLIC_APP_URL=http://localhost:3000`
   - Public app origin for links/metadata contexts
+- `NEXT_PUBLIC_DATA_MODE=mock`
+  - `mock` (default): serves data from local mock provider
+  - `live`: enables provider routing to live stubs (Blockfrost plumbing in place)
 
 ---
 
@@ -71,7 +74,13 @@ npm run test:watch # run Jest in watch mode
 
 ## API Routes (MVP)
 
-All API routes currently return typed mock-backed responses from `src/lib/mockData.ts` and include structured error payloads.
+All API routes return typed responses and include structured error payloads.
+
+As of Sprint 1, API routes use a provider factory:
+
+- `src/lib/providers/index.ts` picks provider by `NEXT_PUBLIC_DATA_MODE`
+- `src/lib/providers/mock.ts` returns current mock data
+- `src/lib/providers/blockfrost.ts` is the live-mode stub (health check + contract-preserving fallback)
 
 - `GET /api/tvl`
 - `GET /api/utilization`
@@ -91,6 +100,18 @@ All API routes currently return typed mock-backed responses from `src/lib/mockDa
 3. TanStack hook in `src/lib/hooks/*` wraps query config
 4. `*DataSection` component handles loading/error/retry
 5. Presentational component renders filtered/interactive UI
+
+For primary coalition endpoints (`/api/tvl`, `/api/utilization`, `/api/incentives`, `/api/blog`), the route internals now resolve through the provider layer before returning data.
+
+---
+
+## Sprint 1 Highlights
+
+- Recharts-based interactive utilization heatmap with tooltips, asset filters, and color legend
+- Mock/live data mode toggle with provider factory abstraction
+- Query refetch intervals are now configurable and enabled automatically in live mode
+- Theme preference persistence via Zustand `persist`
+- Core layout/nav/sidebar/footer updated to use theme tokens for dark/light switching
 
 This pattern is used across dashboard/blog/entities/incentives/comms/guides sections.
 

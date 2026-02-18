@@ -133,24 +133,33 @@ const queryClient = new QueryClient({
 
 ## 3. Data Flow
 
-### 3.1 MVP Data Flow
+### 3.1 MVP Data Flow (Sprint 1 Updated)
 
 ```
-mockData.ts → API Route → TanStack Query Hook → Component → Recharts/UI
+mockData.ts / live provider stub → API Route → TanStack Query Hook → Component → Recharts/UI
 ```
 
-1. API route handler imports from `mockData.ts` and returns JSON.
-2. TanStack Query hook fetches from API route, caches result.
-3. Component reads from hook, passes to chart/table/card.
-4. Zustand handles UI-only state (theme, sidebar).
+1. API route handler calls `getDataProvider()` from `src/lib/providers/index.ts`.
+2. Provider is selected by `NEXT_PUBLIC_DATA_MODE` (`mock` or `live`).
+3. Provider returns normalized payload shape for route response.
+4. TanStack Query hook fetches from API route and caches result.
+5. In `live` mode, hooks enable 5-minute polling via `QUERY_REFETCH_INTERVAL_MS`.
+6. Component reads from hook, passes to chart/table/card.
+7. Zustand handles UI-only state (theme, sidebar).
+
+Provider modules:
+
+- `src/lib/providers/mock.ts` — current mock-backed implementation
+- `src/lib/providers/blockfrost.ts` — live-mode stub (health check + contract-preserving fallback)
+- `src/lib/providers/fluid.ts` — reserved stub for future incentives integration
 
 ### 3.2 Phase 2 Data Flow
 
 ```
-External API → API Route (transform) → TanStack Query → Component → Recharts/UI
+External API → Provider (transform) → API Route → TanStack Query → Component → Recharts/UI
 ```
 
-Only the API route internals change. Frontend hooks remain identical.
+Only provider internals should change as live integrations land. Frontend hooks and route response contracts stay stable.
 
 ---
 

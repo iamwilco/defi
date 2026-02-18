@@ -1,10 +1,10 @@
 import { ContributionsTable } from "@/components/dashboard/ContributionsTable";
 import { ClientChartsSection } from "@/components/dashboard/ClientChartsSection";
+import { ClientHeatmapSection } from "@/components/dashboard/ClientHeatmapSection";
 import { GrowthWindowCard } from "@/components/dashboard/GrowthWindowCard";
 import { HeroSection } from "@/components/dashboard/HeroSection";
 import { IncentivesOverview } from "@/components/dashboard/IncentivesOverview";
 import { ProofOfReserves } from "@/components/dashboard/ProofOfReserves";
-import { UtilizationHeatmap } from "@/components/dashboard/UtilizationHeatmap";
 import { ApiStatusCard } from "@/components/dashboard/ApiStatusCard";
 import { DashboardCard } from "@/components/shared/DashboardCard";
 
@@ -31,7 +31,7 @@ export default function Home() {
         </DashboardCard>
 
         <DashboardCard title="Utilization Heatmap">
-          <UtilizationHeatmap />
+          <ClientHeatmapSection />
         </DashboardCard>
       </section>
 

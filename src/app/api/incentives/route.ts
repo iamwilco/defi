@@ -1,12 +1,11 @@
 import { NextResponse } from "next/server";
-import { incentives } from "@/lib/mockData";
+import { getDataProvider } from "@/lib/providers";
 
 export async function GET() {
   try {
-    return NextResponse.json({
-      active: incentives.filter((item) => item.active),
-      upcoming: incentives.filter((item) => !item.active),
-    });
+    const provider = getDataProvider();
+    const payload = await provider.getIncentives();
+    return NextResponse.json(payload);
   } catch {
     return NextResponse.json(
       {

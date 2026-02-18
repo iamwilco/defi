@@ -1,12 +1,11 @@
 import { NextResponse } from "next/server";
-import { assetUtilization, heatmapCells } from "@/lib/mockData";
+import { getDataProvider } from "@/lib/providers";
 
 export async function GET() {
   try {
-    return NextResponse.json({
-      assets: assetUtilization,
-      heatmap: heatmapCells,
-    });
+    const provider = getDataProvider();
+    const payload = await provider.getUtilization();
+    return NextResponse.json(payload);
   } catch {
     return NextResponse.json(
       {
