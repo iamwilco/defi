@@ -164,6 +164,14 @@ export const entities: CoalitionEntity[] = [
     website: "https://wave.example",
     role: "Capital Partner",
   },
+  {
+    id: "lenfi",
+    name: "LenFI",
+    logo: "/logos/lenfi.svg",
+    description: "DeFi lending venue and proof-of-reserves reference collaborator.",
+    website: "https://lenfi.io",
+    role: "Lending Partner",
+  },
 ];
 
 export const totalTVL = coalitionContributions.reduce((sum, item) => sum + item.tvl, 0);
