@@ -1,11 +1,11 @@
 import {
   assetUtilization,
-  blogPosts,
   coalitionContributions,
   heatmapCells,
   incentives,
   totalTVL,
 } from "@/lib/mockData";
+import { getContentBlogPosts } from "@/lib/content/blog";
 import type { CoalitionDataProvider } from "@/lib/providers/types";
 
 export const mockProvider: CoalitionDataProvider = {
@@ -28,6 +28,6 @@ export const mockProvider: CoalitionDataProvider = {
     };
   },
   async getBlogPosts() {
-    return { posts: blogPosts };
+    return { posts: await getContentBlogPosts() };
   },
 };

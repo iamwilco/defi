@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { blogPosts } from "@/lib/mockData";
+import { getContentBlogPostBySlug } from "@/lib/content/blog";
 import { withApiHeaders, optionsResponse } from "@/lib/security/http";
 import { checkRateLimit } from "@/lib/security/rateLimit";
 
@@ -19,7 +19,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
 
   try {
     const { slug } = await params;
-    const post = blogPosts.find((item) => item.slug === slug);
+    const post = await getContentBlogPostBySlug(slug);
 
     if (!post) {
       return withApiHeaders(

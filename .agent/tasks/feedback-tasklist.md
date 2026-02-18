@@ -121,8 +121,8 @@
 
 ### 4A: CMS Integration
 
-- [ ] **FB-110** Evaluate Sanity vs. Git-based markdown workflow for blog content
-- [ ] **FB-111** Implement chosen CMS integration for blog posts
+- [x] **FB-110** Evaluate Sanity vs. Git-based markdown workflow for blog content
+- [x] **FB-111** Implement chosen CMS integration for blog posts
 - [ ] **FB-112** Add entity content ownership model (who owns content + removal rights)
 - [ ] **FB-113** Create `/admin` route stub behind basic auth for content preview
 

@@ -153,6 +153,12 @@ For primary coalition endpoints (`/api/tvl`, `/api/utilization`, `/api/incentive
 - Added security headers in `next.config.ts` (CSP, frame/content/referrer/permissions policies)
 - Added middleware-based admin basic-auth guard stub for future `/admin` route
 
+## Sprint 4 (Current) Highlights
+
+- Blog content now supports repo-local markdown files under `src/content/blog/*.md`
+- Content loader in `src/lib/content/blog.ts` parses front matter and preserves `BlogPost` contracts
+- CMS decision log added at `.agent/tasks/cms-evaluation.md` (Git markdown selected for now)
+
 This pattern is used across dashboard/blog/entities/incentives/comms/guides sections.
 
 ---

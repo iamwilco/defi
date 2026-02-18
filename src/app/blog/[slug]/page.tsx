@@ -3,13 +3,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { blogPosts } from "@/lib/mockData";
+import { getContentBlogPosts } from "@/lib/content/blog";
 
 export async function generateStaticParams() {
+  const blogPosts = await getContentBlogPosts();
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const blogPosts = await getContentBlogPosts();
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
 
@@ -26,6 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const blogPosts = await getContentBlogPosts();
   const { slug } = await params;
   const postIndex = blogPosts.findIndex((item) => item.slug === slug);
   const post = postIndex >= 0 ? blogPosts[postIndex] : undefined;
