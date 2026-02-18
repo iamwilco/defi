@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="USDM blog placeholder screenshot">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <rect x="60" y="60" width="1320" height="90" rx="16" fill="#0b1220" opacity="0.85"/>
+  <rect x="60" y="180" width="1320" height="120" rx="16" fill="#0b1220" opacity="0.85"/>
+  <rect x="60" y="330" width="640" height="470" rx="20" fill="#0b1220" opacity="0.85"/>
+  <rect x="740" y="330" width="640" height="470" rx="20" fill="#0b1220" opacity="0.85"/>
+  <text x="80" y="116" fill="#5eead4" font-size="28" font-family="Arial, sans-serif">DeFi Pulse — Placeholder Screenshot</text>
+  <text x="80" y="232" fill="#e2e8f0" font-size="20" font-family="Arial, sans-serif">Blog filters + phase infographic + 14-day recap</text>
+</svg>

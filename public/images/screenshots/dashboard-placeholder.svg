@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-label="USDM dashboard placeholder screenshot">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <rect x="60" y="60" width="1320" height="80" rx="16" fill="#0b1220" opacity="0.85"/>
+  <rect x="60" y="170" width="860" height="280" rx="20" fill="#0b1220" opacity="0.85"/>
+  <rect x="940" y="170" width="440" height="280" rx="20" fill="#0b1220" opacity="0.85"/>
+  <rect x="60" y="480" width="1320" height="340" rx="20" fill="#0b1220" opacity="0.85"/>
+  <text x="80" y="112" fill="#93c5fd" font-size="28" font-family="Arial, sans-serif">USDM Coalition Dashboard — Placeholder Screenshot</text>
+  <text x="80" y="220" fill="#e2e8f0" font-size="20" font-family="Arial, sans-serif">Hero + TVL + Heatmap + Incentives Preview</text>
+</svg>

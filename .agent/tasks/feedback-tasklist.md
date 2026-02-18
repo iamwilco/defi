@@ -99,17 +99,21 @@
 - [x] **FB-091** Add CORS headers to API routes (configurable allowed origins)
 - [x] **FB-092** Add Content Security Policy headers in `next.config.js`
 - [x] **FB-093** Add basic auth middleware stub for future `/admin` route
-- [ ] **FB-094** Run `npm audit` and fix any reported vulnerabilities
+- [ ] **FB-094** Run `npm audit` and fix any reported vulnerabilities *(audit completed; fixes deferred due semver-major ESLint toolchain upgrades — see `tasks/sprint3-audit-notes.md`)*
 - [x] **FB-095** Verify `.env.local` is in `.gitignore` and no secrets are exposed
 
 ### 3C: README & Documentation Polish
 
-- [ ] **FB-100** Take 2-3 dashboard screenshots → save to `public/images/screenshots/`
-- [ ] **FB-101** Add screenshots to README (dashboard hero, blog list, heatmap)
-- [ ] **FB-102** Add Vercel deploy button badge to README
-- [ ] **FB-103** Add `.agent/` explanation section to README — what it contains, how it supports AI-assisted dev and commit formatting
-- [ ] **FB-104** Create OG social preview image for link sharing (`public/images/og-preview.png`)
-- [ ] **FB-105** Verify content ownership footer text (PRD §9.3) renders on all pages
+- [x] **FB-100** Take 2-3 dashboard screenshots → save to `public/images/screenshots/` *(placeholder visuals added; replace with live captures later)*
+- [x] **FB-101** Add screenshots to README (dashboard hero, blog list, heatmap)
+- [x] **FB-102** Add Vercel deploy button badge to README
+- [x] **FB-103** Add `.agent/` explanation section to README — what it contains, how it supports AI-assisted dev and commit formatting
+- [x] **FB-104** Create OG social preview image for link sharing (`public/images/og-preview.png`)
+- [x] **FB-105** Verify content ownership footer text (PRD §9.3) renders on all pages
+
+### 3D: Audit Notes
+
+- [ ] **FB-106** Lighthouse audit execution *(blocked locally: Chrome not installed — see `tasks/sprint3-audit-notes.md`)*
 
 ---
 

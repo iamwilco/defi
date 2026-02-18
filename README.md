@@ -1,8 +1,28 @@
 # USDM DeFi Coalition Dashboard — Proof of Growth
 
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new)
+
 Public-facing DeFi coalition dashboard for USDM growth on Cardano.
 
 This project ships as a Next.js App Router application with query-backed UI sections, typed API routes, and reusable dashboard/content components.
+
+---
+
+## Visual Preview
+
+> Placeholder preview assets are included in `public/images/screenshots/` until production screenshots are captured.
+
+### Dashboard
+
+![Dashboard preview](./public/images/screenshots/dashboard-placeholder.svg)
+
+### Blog / DeFi Pulse
+
+![Blog preview](./public/images/screenshots/blog-placeholder.svg)
+
+### Social Preview Asset
+
+- OG preview asset: `public/images/og-preview.svg`
 
 ---
 
@@ -181,6 +201,17 @@ Detailed deployment and workflow docs:
 - `.agent/workflows/deploy.md`
 - `.agent/workflows/build.md`
 - `.agent/workflows/test.md`
+
+---
+
+## `.agent` Documentation
+
+The `.agent/` directory defines the project playbook used for AI-assisted implementation.
+
+- `tasks/` tracks PRD, backlog, feedback tasklist, and lessons learned
+- `system/` documents architecture, data models, and API contracts
+- `workflows/` contains repeatable procedures (`build`, `test`, `deploy`, etc.)
+- `skills/git-commit-formatter/SKILL.md` enforces Conventional Commit formatting for task/sprint commits
 
 ---
 
