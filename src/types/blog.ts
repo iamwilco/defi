@@ -15,4 +15,6 @@ export interface TimelineMilestone {
   title: string;
   description: string;
   window: string;
+  startDate: string;
+  endDate: string;
 }

@@ -117,18 +117,51 @@ export const timeline: TimelineMilestone[] = [
     title: "Foundation",
     description: "Days 1-8: launch announcements, onboarding loops, first liquidity pushes.",
     window: "Days 1-8",
+    startDate: "2026-02-01",
+    endDate: "2026-02-08",
   },
   {
     phase: 2,
     title: "Acceleration",
     description: "Days 10-14: campaign amplification, recap content, partner updates.",
     window: "Days 10-14",
+    startDate: "2026-02-10",
+    endDate: "2026-02-14",
   },
   {
     phase: 3,
     title: "Long-term",
     description: "Monthly reviews, quarterly growth proofs, institutional narratives.",
     window: "Monthly/Quarterly",
+    startDate: "2026-03-01",
+    endDate: "2026-12-31",
+  },
+];
+
+export const commsFeed = [
+  {
+    id: "mint-fluid-video",
+    kind: "video",
+    title: "Mint to Fluid Walkthrough",
+    description: "Video placeholder for onboarding flow from mint to lending.",
+    href: "#",
+    date: "2026-02-16",
+  },
+  {
+    id: "coalition-space-weekly",
+    kind: "x_space",
+    title: "Coalition X Space",
+    description: "Weekly coalition discussion covering growth metrics and campaign strategy.",
+    href: "#",
+    date: "2026-02-14",
+  },
+  {
+    id: "phase-recap-article",
+    kind: "article",
+    title: "14 Days of USDM Recap",
+    description: "Campaign recap article with incentives performance and TVL velocity highlights.",
+    href: "#",
+    date: "2026-02-15",
   },
 ];
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MediaEmbed } from "@/components/comms/MediaEmbed";
+import { CommsFeed } from "@/components/comms/CommsFeed";
 
 export const metadata: Metadata = {
   title: "Communications | USDM Coalition",
@@ -19,18 +19,22 @@ export default function CommsPage() {
         <p className="mt-2">Mint USDM on NBX and route into Fluid opportunities for active campaign windows.</p>
       </section>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <MediaEmbed
-          title="Mint to Fluid Walkthrough"
-          description="Video placeholder for onboarding flow from mint to lending."
-          href="#"
-        />
-        <MediaEmbed
-          title="Coalition X Space"
-          description="Weekly coalition discussion covering growth metrics and campaign strategy."
-          href="#"
-        />
-      </div>
+      <section className="grid gap-4 md:grid-cols-2">
+        <article className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+          <h2 className="text-lg font-semibold text-slate-100">Coalition Updates</h2>
+          <p className="mt-2 text-sm text-slate-300">
+            Weekly snapshots summarize TVL movement, top-performing campaigns, and contribution milestones.
+          </p>
+        </article>
+        <article className="rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+          <h2 className="text-lg font-semibold text-slate-100">Institutional Briefings</h2>
+          <p className="mt-2 text-sm text-slate-300">
+            Publish concise notes for partners evaluating USDM liquidity depth and reserve-backed confidence.
+          </p>
+        </article>
+      </section>
+
+      <CommsFeed />
     </div>
   );
 }
