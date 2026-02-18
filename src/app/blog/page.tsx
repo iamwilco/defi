@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BlogList } from "@/components/blog/BlogList";
+import { BlogDataSection } from "@/components/blog/BlogDataSection";
 import { DeFiPulseTimeline } from "@/components/blog/DeFiPulseTimeline";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function BlogPage() {
         <p className="mt-2 text-slate-300">Monthly coalition insights and phase-based progress reviews.</p>
       </header>
 
-      <BlogList />
+      <BlogDataSection />
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-slate-100">Phased Reviews</h2>

@@ -1,15 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { blogPosts } from "@/lib/mockData";
+import type { BlogPost } from "@/types";
 import { BlogCard } from "@/components/blog/BlogCard";
 
-export function BlogList() {
+export function BlogList({ posts }: { posts: BlogPost[] }) {
   const [query, setQuery] = useState("");
   const [phase, setPhase] = useState<"all" | 1 | 2 | 3>("all");
 
   const filteredPosts = useMemo(() => {
-    return blogPosts.filter((post) => {
+    return posts.filter((post) => {
       const matchesQuery =
         query.length === 0 ||
         post.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -20,7 +20,7 @@ export function BlogList() {
 
       return matchesQuery && matchesPhase;
     });
-  }, [query, phase]);
+  }, [posts, query, phase]);
 
   return (
     <section className="space-y-4">

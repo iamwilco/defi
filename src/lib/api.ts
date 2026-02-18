@@ -1,4 +1,4 @@
-import type { BlogPost, Incentive, TVLResponse, UtilizationResponse } from "@/types";
+import type { BlogPost, CoalitionEntity, Incentive, TVLResponse, UtilizationResponse } from "@/types";
 
 async function fetcher<T>(url: string): Promise<T> {
   const response = await fetch(url, { next: { revalidate: 300 } });
@@ -22,4 +22,8 @@ export function getIncentives() {
 
 export function getBlogPosts() {
   return fetcher<{ posts: BlogPost[] }>("/api/blog");
+}
+
+export function getEntities() {
+  return fetcher<{ entities: CoalitionEntity[] }>("/api/entities");
 }
