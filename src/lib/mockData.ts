@@ -3,6 +3,7 @@ import type {
   BlogPost,
   CoalitionContribution,
   CoalitionEntity,
+  ContentOwnershipPolicy,
   ComingSoonTeaser,
   CommsFeedItem,
   GuideEntry,
@@ -323,6 +324,44 @@ export const entities: CoalitionEntity[] = [
     description: "DeFi lending venue and proof-of-reserves reference collaborator.",
     website: "https://lenfi.io",
     role: "Lending Partner",
+  },
+];
+
+export const contentOwnershipPolicies: ContentOwnershipPolicy[] = [
+  {
+    id: "nbx-policy",
+    entity: "NBX",
+    contentOwner: "NBX Content Team",
+    removalRights: "entity_only",
+    removalRequestPath: "ops@nbx.com",
+  },
+  {
+    id: "fluid-policy",
+    entity: "Fluid",
+    contentOwner: "Fluid Communications",
+    removalRights: "entity_only",
+    removalRequestPath: "legal@fluidtokens.com",
+  },
+  {
+    id: "moneta-policy",
+    entity: "Moneta / W3I",
+    contentOwner: "Moneta Editorial",
+    removalRights: "shared_governance",
+    removalRequestPath: "coalition-governance@moneta.digital",
+  },
+  {
+    id: "wave-policy",
+    entity: "Wave Capital",
+    contentOwner: "Wave Research",
+    removalRights: "entity_only",
+    removalRequestPath: "research@wave.example",
+  },
+  {
+    id: "lenfi-policy",
+    entity: "LenFI",
+    contentOwner: "LenFI Growth",
+    removalRights: "shared_governance",
+    removalRequestPath: "content@lenfi.io",
   },
 ];
 

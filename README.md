@@ -158,6 +158,8 @@ For primary coalition endpoints (`/api/tvl`, `/api/utilization`, `/api/incentive
 - Blog content now supports repo-local markdown files under `src/content/blog/*.md`
 - Content loader in `src/lib/content/blog.ts` parses front matter and preserves `BlogPost` contracts
 - CMS decision log added at `.agent/tasks/cms-evaluation.md` (Git markdown selected for now)
+- Entity content ownership/removal policy model added and surfaced on `/entities`
+- `/admin` preview stub added (protected by proxy basic-auth guard when enabled)
 
 This pattern is used across dashboard/blog/entities/incentives/comms/guides sections.
 

@@ -29,6 +29,14 @@ export interface CoalitionEntity {
   role: string;
 }
 
+export interface ContentOwnershipPolicy {
+  id: string;
+  entity: string;
+  contentOwner: string;
+  removalRights: "entity_only" | "shared_governance";
+  removalRequestPath: string;
+}
+
 export interface TVLResponse {
   total: number;
   contributions: CoalitionContribution[];

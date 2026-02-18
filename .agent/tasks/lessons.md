@@ -27,6 +27,11 @@
 **Root cause:** One-off route edits drift quickly and create inconsistent behavior across endpoints.
 **Rule:** Keep shared security behavior in `src/lib/security/*` utilities and apply uniformly across all route handlers.
 
+### 2026-02-18 — Content Governance During CMS Migration
+**What happened:** While moving blog content to Git markdown, ownership/removal responsibilities also needed to be explicit.
+**Root cause:** Content source migration without governance metadata leaves policy ambiguous across entities.
+**Rule:** Pair any CMS/content-source migration with a typed ownership model and a visible admin/policy surface.
+
 <!-- Example format:
 ### 2026-02-18 — [Context]
 **What happened:** ...
