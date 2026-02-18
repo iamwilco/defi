@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         <Providers>
-          <div className="relative min-h-screen text-foreground">
+          <div className="relative flex min-h-screen text-foreground">
             <ClientParticles />
             <a
               href="#main-content"
@@ -42,14 +42,18 @@ export default function RootLayout({
             >
               Skip to main content
             </a>
-            <Navbar />
-            <div className="relative z-10 mx-auto flex w-full max-w-7xl">
-              <Sidebar />
-              <main id="main-content" className="w-full px-4 py-6 sm:px-6 lg:px-8">
+
+            {/* Sidebar — fixed left nav */}
+            <Sidebar />
+
+            {/* Content column: top bar + main + footer */}
+            <div className="relative z-10 flex min-h-screen flex-1 flex-col">
+              <Navbar />
+              <main id="main-content" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6 lg:px-8">
                 {children}
               </main>
+              <Footer />
             </div>
-            <Footer />
           </div>
         </Providers>
       </body>
