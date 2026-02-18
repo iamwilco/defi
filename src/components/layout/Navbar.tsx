@@ -23,7 +23,7 @@ export function Navbar() {
 
         {/* Mobile: show logo text in the top bar since sidebar is collapsed */}
         <span className="text-sm font-bold tracking-wide text-foreground lg:hidden">
-          USDM <span className="text-accent-blue">Coalition</span>
+          DeFi <span className="text-accent-blue">Coalition</span>
         </span>
 
         {/* Right side: wallet + theme */}

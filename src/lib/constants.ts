@@ -1,4 +1,4 @@
-export const APP_TITLE = "USDM DeFi Coalition Dashboard - Proof of Growth";
+export const APP_TITLE = "DeFi Coalition — Proof of Growth";
 
 const dataModeEnv = process.env.NEXT_PUBLIC_DATA_MODE;
 

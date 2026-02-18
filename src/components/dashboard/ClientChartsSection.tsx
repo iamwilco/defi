@@ -5,14 +5,14 @@ import { DashboardCard } from "@/components/shared/DashboardCard";
 
 const TvlChart = dynamic(() => import("@/components/dashboard/TvlChart").then((mod) => mod.TvlChart), {
   ssr: false,
-  loading: () => <div className="h-72 animate-pulse rounded-xl bg-slate-800" />,
+  loading: () => <div className="h-72 animate-pulse rounded-xl bg-white/5" />,
 });
 
 const AssetUtilizationChart = dynamic(
   () => import("@/components/dashboard/AssetUtilization").then((mod) => mod.AssetUtilizationChart),
   {
     ssr: false,
-    loading: () => <div className="h-72 animate-pulse rounded-xl bg-slate-800" />,
+    loading: () => <div className="h-72 animate-pulse rounded-xl bg-white/5" />,
   },
 );
 

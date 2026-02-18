@@ -69,9 +69,9 @@
 
 html:not(.dark) {
   --background: #f8fafc;
-  --background-end: #e2e8f0;
+  --background-end: #eef2f7;
   --foreground: #0f172a;
-  --card: rgba(255, 255, 255, 0.8);
+  --card: rgba(255, 255, 255, 0.85);
   --card-hover: rgba(255, 255, 255, 0.95);
   --surface: #ffffff;
   --surface-soft: #f1f5f9;
@@ -79,9 +79,40 @@ html:not(.dark) {
   --border: rgba(0, 0, 0, 0.08);
   --border-strong: rgba(0, 0, 0, 0.15);
   --text-primary: #0f172a;
-  --text-secondary: #334155;
+  --text-secondary: #475569;
   --text-muted: #64748b;
+
+  --accent-green: #059669;
+  --accent-green-glow: rgba(5, 150, 105, 0.15);
+  --accent-red: #dc2626;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
+
+  --glow-blue: 0 4px 20px rgba(0, 123, 255, 0.1);
+  --glow-gold: 0 4px 20px rgba(255, 165, 0, 0.1);
+  --glow-soft: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
+
+/*
+ * Light mode: remap dark-theme glass patterns.
+ * Components use inline bg-white/N + border-white/N which are
+ * invisible on light backgrounds. These overrides make them visible.
+ */
+html:not(.dark) [class*="bg-white/"] {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+html:not(.dark) [class*="border-white/"] {
+  border-color: rgba(0, 0, 0, 0.07);
+}
+
+html:not(.dark) [class*="bg-black/"] {
+  background-color: rgba(255, 255, 255, 0.92);
+}
+
+html:not(.dark) .glow-blue-text { text-shadow: none; }
+html:not(.dark) .glow-gold-text { text-shadow: none; }
 
 body {
   background: linear-gradient(180deg, var(--background) 0%, var(--background-end) 100%);
@@ -191,4 +222,12 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+html:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.22);
 }

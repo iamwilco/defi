@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CommsDataSection } from "@/components/comms/CommsDataSection";
 
 export const metadata: Metadata = {
-  title: "Communications | USDM Coalition",
+  title: "Communications | DeFi Coalition",
   description: "X Spaces, campaign videos, and coalition communication links.",
 };
 

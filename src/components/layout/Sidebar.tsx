@@ -123,7 +123,7 @@ function SidebarContent({
           </span>
           {!collapsed && (
             <span className="text-sm font-bold tracking-wide text-foreground">
-              USDM <span className="text-accent-blue">Coalition</span>
+              DeFi <span className="text-accent-blue">Coalition</span>
             </span>
           )}
         </Link>

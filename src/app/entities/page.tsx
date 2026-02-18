@@ -4,7 +4,7 @@ import { ComingSoonCard } from "@/components/shared/ComingSoonCard";
 import { comingSoonTeasers, contentOwnershipPolicies } from "@/lib/mockData";
 
 export const metadata: Metadata = {
-  title: "Entities | USDM Coalition",
+  title: "Entities | DeFi Coalition",
   description: "Coalition members contributing to USDM growth and liquidity.",
 };
 

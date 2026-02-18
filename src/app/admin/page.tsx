@@ -3,7 +3,7 @@ import { contentOwnershipPolicies } from "@/lib/mockData";
 import { getContentBlogPosts } from "@/lib/content/blog";
 
 export const metadata: Metadata = {
-  title: "Admin Preview | USDM Coalition",
+  title: "Admin Preview | DeFi Coalition",
   description: "Protected content preview and ownership controls.",
   robots: {
     index: false,

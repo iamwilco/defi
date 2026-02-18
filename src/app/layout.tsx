@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: APP_TITLE,
   description:
-    "Joint marketing dashboard for USDM coalition growth, contributions, incentives, and education.",
+    "DeFi Coalition dashboard for growth, contributions, incentives, and education on Cardano.",
 };
 
 export default function RootLayout({

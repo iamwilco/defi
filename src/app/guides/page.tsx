@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GuidesDataSection } from "@/components/guides/GuidesDataSection";
 
 export const metadata: Metadata = {
-  title: "How-To Library | USDM Coalition",
+  title: "How-To Library | DeFi Coalition",
   description: "Guides for minting, lending, and coalition participation paths.",
 };
 

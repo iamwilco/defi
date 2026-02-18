@@ -6,7 +6,7 @@ import { FourteenDaysRecap } from "@/components/blog/FourteenDaysRecap";
 import { fourteenDayRecap, timeline } from "@/lib/mockData";
 
 export const metadata: Metadata = {
-  title: "DeFi Pulse | USDM Coalition",
+  title: "DeFi Pulse | DeFi Coalition",
   description: "Coalition blog posts, phase reviews, and growth narratives.",
 };
 

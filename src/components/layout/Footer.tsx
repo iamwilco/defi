@@ -40,7 +40,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-white/6 pt-4 text-center text-[10px] text-(--text-muted)">
-          USDM DeFi Coalition Dashboard — Built on Cardano
+          DeFi Coalition — Built on Cardano
         </div>
       </div>
     </footer>
