@@ -23,20 +23,20 @@ export function EntitiesGrid({ entities }: { entities: CoalitionEntity[] }) {
 
   return (
     <section className="space-y-4">
-      <div className="flex flex-col gap-3 rounded-xl border border-white/10 bg-slate-900/70 p-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 rounded-xl border border-white/8 bg-white/2 p-4 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search entities"
           aria-label="Search coalition entities"
-          className="w-full rounded-md border border-white/15 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none placeholder:text-slate-500 focus:border-blue-400 sm:max-w-sm"
+          className="w-full rounded-md border border-white/10 bg-black/20 px-3 py-2 text-sm text-foreground outline-none placeholder:text-(--text-muted) focus:border-accent-blue sm:max-w-sm"
         />
 
         <select
           value={role}
           onChange={(event) => setRole(event.target.value)}
           aria-label="Filter entities by role"
-          className="rounded-md border border-white/15 bg-slate-950 px-3 py-2 text-sm text-slate-100"
+          className="rounded-md border border-white/10 bg-black/20 px-3 py-2 text-sm text-foreground"
         >
           {roles.map((item) => (
             <option key={item} value={item}>
@@ -53,7 +53,7 @@ export function EntitiesGrid({ entities }: { entities: CoalitionEntity[] }) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-300">
+        <p className="rounded-xl border border-white/8 bg-white/2 p-4 text-sm text-(--text-secondary)">
           No entities match your current filters.
         </p>
       ) : null}

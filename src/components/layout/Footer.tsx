@@ -8,7 +8,7 @@ export function Footer() {
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-wider text-accent-blue">Coalition</h3>
             <p className="mt-2 text-xs leading-relaxed text-(--text-muted)">
-              Moneta/W3I • NBX • Fluid • Wave Capital • LenFI — powering USDM Proof of Growth on Cardano.
+              Moneta/W3I • NBX • Fluid • Wave Capital — powering DeFi Proof of Growth on Cardano.
             </p>
           </div>
           <div>

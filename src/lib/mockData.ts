@@ -19,7 +19,6 @@ export const coalitionContributions: CoalitionContribution[] = [
   { id: "2", entity: "Fluid", asset: "USDM", tvl: 28000, lendingAmount: 14000, borrowingAmount: 9000 },
   { id: "3", entity: "Moneta/W3I", asset: "USDM", tvl: 18000, lendingAmount: 6000, borrowingAmount: 3500 },
   { id: "4", entity: "Wave Capital", asset: "fGLD", tvl: 14000, lendingAmount: 4500, borrowingAmount: 2500 },
-  { id: "5", entity: "LenFI", asset: "Night", tvl: 8500, lendingAmount: 3000, borrowingAmount: 2000 },
 ];
 
 export const fourteenDayRecap: RecapHighlight[] = [
@@ -306,7 +305,7 @@ export const entities: CoalitionEntity[] = [
     name: "Moneta / W3I",
     logo: "/logos/moneta.svg",
     description: "USDM issuer and coalition coordination lead.",
-    website: "https://moneta.digital",
+    website: "https://moneta.global/",
     role: "Issuer",
   },
   {
@@ -314,16 +313,8 @@ export const entities: CoalitionEntity[] = [
     name: "Wave Capital",
     logo: "/logos/wave.svg",
     description: "Institutional strategy and growth capital partner.",
-    website: "https://wave.example",
+    website: undefined,
     role: "Capital Partner",
-  },
-  {
-    id: "lenfi",
-    name: "LenFI",
-    logo: "/logos/lenfi.svg",
-    description: "DeFi lending venue and proof-of-reserves reference collaborator.",
-    website: "https://lenfi.io",
-    role: "Lending Partner",
   },
 ];
 
@@ -347,7 +338,7 @@ export const contentOwnershipPolicies: ContentOwnershipPolicy[] = [
     entity: "Moneta / W3I",
     contentOwner: "Moneta Editorial",
     removalRights: "shared_governance",
-    removalRequestPath: "coalition-governance@moneta.digital",
+    removalRequestPath: "coalition-governance@moneta.global",
   },
   {
     id: "wave-policy",
@@ -355,13 +346,6 @@ export const contentOwnershipPolicies: ContentOwnershipPolicy[] = [
     contentOwner: "Wave Research",
     removalRights: "entity_only",
     removalRequestPath: "research@wave.example",
-  },
-  {
-    id: "lenfi-policy",
-    entity: "LenFI",
-    contentOwner: "LenFI Growth",
-    removalRights: "shared_governance",
-    removalRequestPath: "content@lenfi.io",
   },
 ];
 

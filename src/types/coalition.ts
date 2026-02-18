@@ -25,7 +25,7 @@ export interface CoalitionEntity {
   name: string;
   logo: string;
   description: string;
-  website: string;
+  website?: string;
   role: string;
 }
 

@@ -14,7 +14,7 @@ export default function EntitiesPage() {
       <header>
         <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-blue">Partners</p>
         <h1 className="mt-2 text-3xl font-bold text-foreground">Coalition Entities</h1>
-        <p className="mt-2 text-sm text-(--text-secondary)">NBX, Fluid, Moneta/W3I, Wave and partners powering Proof of Growth.</p>
+        <p className="mt-2 text-sm text-(--text-secondary)">NBX, Fluid, Moneta/W3I, Wave Capital and partners powering Proof of Growth.</p>
       </header>
 
       <EntitiesDataSection />
