@@ -87,10 +87,10 @@
 - [x] **FB-080** Add skip-to-content link in `layout.tsx` (hidden, visible on focus)
 - [x] **FB-081** Add `aria-label` or descriptive text alternatives to all Recharts charts
 - [x] **FB-082** Convert entity logo placeholders to `next/image` with proper sizing
-- [ ] **FB-083** Run Lighthouse audit on all pages — document scores
-- [ ] **FB-084** Fix any Lighthouse a11y issues (contrast, labels, heading order)
-- [ ] **FB-085** Fix any Lighthouse performance issues (LCP, CLS, FID)
-- [ ] **FB-086** Keyboard navigation test: verify all interactive elements are reachable and operable via keyboard
+- [ ] **FB-083** Run Lighthouse audit on all pages — document scores *(blocked in current env: no Chrome binary; use `.agent/workflows/lighthouse-a11y-audit.md`)*
+- [ ] **FB-084** Fix any Lighthouse a11y issues (contrast, labels, heading order) *(pending FB-083 results)*
+- [ ] **FB-085** Fix any Lighthouse performance issues (LCP, CLS, FID) *(pending FB-083 results)*
+- [ ] **FB-086** Keyboard navigation test: verify all interactive elements are reachable and operable via keyboard *(manual checklist in `.agent/workflows/lighthouse-a11y-audit.md`)*
 - [x] **FB-087** Add `loading="lazy"` or Suspense boundaries to heavy sections not yet deferred
 
 ### 3B: Security Hardening
@@ -113,7 +113,7 @@
 
 ### 3D: Audit Notes
 
-- [ ] **FB-106** Lighthouse audit execution *(blocked locally: Chrome not installed — see `tasks/sprint3-audit-notes.md`)*
+- [ ] **FB-106** Lighthouse audit execution *(blocked locally: Chrome not installed — see `tasks/sprint3-audit-notes.md` and `.agent/workflows/lighthouse-a11y-audit.md`)*
 
 ---
 
