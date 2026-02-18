@@ -1,0 +1,30 @@
+#!/usr/bin/env sh
+set -eu
+
+COMMIT_MSG_FILE="$1"
+FIRST_LINE="$(sed -n '1p' "$COMMIT_MSG_FILE" | tr -d '\r')"
+
+# Allow git-generated commit messages that do not follow conventional format.
+case "$FIRST_LINE" in
+  Merge*|Revert*)
+    exit 0
+    ;;
+esac
+
+PATTERN='^(feat|fix|docs|style|refactor|perf|test|chore)(\([a-z0-9._/-]+\))?!?: [a-z].+'
+
+if ! printf "%s" "$FIRST_LINE" | grep -Eq "$PATTERN"; then
+  echo "❌ Invalid commit message format."
+  echo
+  echo "Use Conventional Commits:"
+  echo "  <type>[optional scope]: <description>"
+  echo
+  echo "Allowed types: feat, fix, docs, style, refactor, perf, test, chore"
+  echo
+  echo "Examples:"
+  echo "  feat(dashboard): add coalition TVL bar chart"
+  echo "  docs(agent): add commit workflow and formatter rules"
+  echo
+  echo "See: .agent/skills/git-commit-formatter/SKILL.md"
+  exit 1
+fi
