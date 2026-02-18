@@ -20,6 +20,7 @@ export function DeFiPulseTimeline() {
             type="date"
             value={since}
             onChange={(event) => setSince(event.target.value)}
+            aria-label="Since date"
             className="mt-1 w-full rounded-md border border-white/15 bg-slate-950 px-3 py-2 text-sm text-slate-100"
           />
         </label>
@@ -29,25 +30,32 @@ export function DeFiPulseTimeline() {
             type="date"
             value={until}
             onChange={(event) => setUntil(event.target.value)}
+            aria-label="Until date"
             className="mt-1 w-full rounded-md border border-white/15 bg-slate-950 px-3 py-2 text-sm text-slate-100"
           />
         </label>
       </div>
 
-      <ol className="space-y-4">
-        {filteredTimeline.map((item) => (
-          <li key={item.phase} className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
-            <p className="text-xs uppercase tracking-widest text-amber-300">{item.window}</p>
-            <h3 className="mt-1 text-lg font-semibold text-slate-100">
-              Phase {item.phase}: {item.title}
-            </h3>
-            <p className="mt-2 text-sm text-slate-300">{item.description}</p>
-            <p className="mt-2 text-xs text-slate-400">
-              {item.startDate} to {item.endDate}
-            </p>
-          </li>
-        ))}
-      </ol>
+      {filteredTimeline.length === 0 ? (
+        <p className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-300" role="status" aria-live="polite">
+          No phase milestones match this date window.
+        </p>
+      ) : (
+        <ol className="space-y-4">
+          {filteredTimeline.map((item) => (
+            <li key={item.phase} className="rounded-xl border border-white/10 bg-slate-900/70 p-4">
+              <p className="text-xs uppercase tracking-widest text-amber-300">{item.window}</p>
+              <h3 className="mt-1 text-lg font-semibold text-slate-100">
+                Phase {item.phase}: {item.title}
+              </h3>
+              <p className="mt-2 text-sm text-slate-300">{item.description}</p>
+              <p className="mt-2 text-xs text-slate-400">
+                {item.startDate} to {item.endDate}
+              </p>
+            </li>
+          ))}
+        </ol>
+      )}
     </section>
   );
 }

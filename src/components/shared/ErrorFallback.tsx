@@ -10,13 +10,14 @@ export function ErrorFallback({
   onRetry,
 }: ErrorFallbackProps) {
   return (
-    <div className="rounded-xl border border-red-400/30 bg-red-500/10 p-4 text-sm text-red-200">
+    <div className="rounded-xl border border-red-400/30 bg-red-500/10 p-4 text-sm text-red-200" role="alert" aria-live="assertive">
       <p className="font-semibold text-red-100">{title}</p>
       <p className="mt-1">{message}</p>
       {onRetry ? (
         <button
           type="button"
           onClick={onRetry}
+          aria-label="Retry loading section"
           className="mt-3 rounded-md border border-red-300/60 bg-red-400/20 px-3 py-1.5 text-xs font-medium"
         >
           Retry

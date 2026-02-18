@@ -27,6 +27,7 @@ export function CommsFeed({ items }: { items: CommsFeedItem[] }) {
             key={value}
             type="button"
             onClick={() => setKind(value)}
+            aria-pressed={kind === value}
             className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${
               kind === value
                 ? "bg-blue-500/25 text-blue-200"

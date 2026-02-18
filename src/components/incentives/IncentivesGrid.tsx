@@ -25,6 +25,7 @@ export function IncentivesGrid({ incentives }: { incentives: Incentive[] }) {
             key={value}
             type="button"
             onClick={() => setStatus(value)}
+            aria-pressed={status === value}
             className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${
               status === value
                 ? "bg-amber-500/20 text-amber-200"

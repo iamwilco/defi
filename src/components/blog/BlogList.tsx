@@ -39,6 +39,7 @@ export function BlogList({ posts }: { posts: BlogPost[] }) {
               key={String(value)}
               type="button"
               onClick={() => setPhase(value)}
+              aria-pressed={phase === value}
               className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${
                 phase === value
                   ? "bg-blue-500/25 text-blue-200"
