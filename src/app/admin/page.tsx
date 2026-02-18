@@ -17,20 +17,21 @@ export default async function AdminPage() {
   return (
     <div className="space-y-8">
       <header>
-        <h1 className="text-3xl font-bold text-foreground">Admin Content Preview</h1>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-red">Protected</p>
+        <h1 className="mt-2 text-3xl font-bold text-foreground">Admin Content Preview</h1>
         <p className="mt-2 text-sm text-(--text-secondary)">
           This route is guarded by basic auth middleware when `ADMIN_BASIC_AUTH_ENABLED=true`.
         </p>
       </header>
 
-      <section className="rounded-2xl border border-border bg-card p-5">
+      <section className="rounded-2xl border border-white/8 bg-white/2 p-5 backdrop-blur-sm">
         <h2 className="text-lg font-semibold text-foreground">Blog Content Queue</h2>
         <p className="mt-1 text-xs text-(--text-muted)">
           Source: `src/content/blog/*.md` parsed through `getContentBlogPosts()`.
         </p>
         <ul className="mt-4 space-y-2 text-sm text-(--text-secondary)">
           {posts.map((post) => (
-            <li key={post.slug} className="rounded-lg border border-border/60 bg-(--surface-soft) px-3 py-2">
+            <li key={post.slug} className="rounded-lg border border-white/6 bg-white/2 px-3 py-2">
               <p className="font-medium text-foreground">{post.title}</p>
               <p className="text-xs text-(--text-muted)">
                 {post.entity} • {post.author} • {post.date} • Phase {post.phase}
@@ -40,7 +41,7 @@ export default async function AdminPage() {
         </ul>
       </section>
 
-      <section className="rounded-2xl border border-border bg-card p-5">
+      <section className="rounded-2xl border border-white/8 bg-white/2 p-5 backdrop-blur-sm">
         <h2 className="text-lg font-semibold text-foreground">Ownership and Removal Rights</h2>
         <div className="mt-3 overflow-x-auto">
           <table className="min-w-full text-left text-xs text-(--text-secondary)">
@@ -54,7 +55,7 @@ export default async function AdminPage() {
             </thead>
             <tbody>
               {contentOwnershipPolicies.map((policy) => (
-                <tr key={policy.id} className="border-t border-border/60">
+                <tr key={policy.id} className="border-t border-white/6">
                   <td className="px-2 py-2 text-foreground">{policy.entity}</td>
                   <td className="px-2 py-2">{policy.contentOwner}</td>
                   <td className="px-2 py-2">

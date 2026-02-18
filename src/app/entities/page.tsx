@@ -12,8 +12,9 @@ export default function EntitiesPage() {
   return (
     <div className="space-y-8">
       <header>
-        <h1 className="text-3xl font-bold text-slate-100">Coalition Entities</h1>
-        <p className="mt-2 text-slate-300">NBX, Fluid, Moneta/W3I, Wave and partners powering Proof of Growth.</p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-blue">Partners</p>
+        <h1 className="mt-2 text-3xl font-bold text-foreground">Coalition Entities</h1>
+        <p className="mt-2 text-sm text-(--text-secondary)">NBX, Fluid, Moneta/W3I, Wave and partners powering Proof of Growth.</p>
       </header>
 
       <EntitiesDataSection />
@@ -29,7 +30,7 @@ export default function EntitiesPage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-border bg-card p-5 text-sm text-(--text-secondary)">
+      <section className="rounded-2xl border border-white/8 bg-white/2 p-5 text-sm text-(--text-secondary) backdrop-blur-sm">
         <h2 className="text-lg font-semibold text-foreground">Joining / Leaving</h2>
         <p className="mt-2">
           Coalition participation follows transparent liquidity and communication principles. Historical
@@ -37,7 +38,7 @@ export default function EntitiesPage() {
         </p>
       </section>
 
-      <section className="rounded-2xl border border-border bg-card p-5">
+      <section className="rounded-2xl border border-white/8 bg-white/2 p-5 backdrop-blur-sm">
         <h2 className="text-lg font-semibold text-foreground">Content Ownership Model</h2>
         <p className="mt-2 text-sm text-(--text-secondary)">
           Each coalition entity retains ownership of authored content and may request updates or removals through
@@ -55,7 +56,7 @@ export default function EntitiesPage() {
             </thead>
             <tbody>
               {contentOwnershipPolicies.map((policy) => (
-                <tr key={policy.id} className="border-t border-border/60">
+                <tr key={policy.id} className="border-t border-white/6">
                   <td className="px-2 py-2 text-foreground">{policy.entity}</td>
                   <td className="px-2 py-2">{policy.contentOwner}</td>
                   <td className="px-2 py-2">{policy.removalRights === "entity_only" ? "Entity Only" : "Shared Governance"}</td>

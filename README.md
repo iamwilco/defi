@@ -36,6 +36,10 @@ This project ships as a Next.js App Router application with query-backed UI sect
 - Radix UI primitives
 - Zustand
 - React Markdown + remark-gfm
+- Framer Motion (animations, page transitions)
+- Three.js / @react-three/fiber + @react-three/drei (3D globe, entity nodes)
+- tsparticles (blockchain-inspired particle background)
+- Cardano Web3 stubs (wallet connect via Zustand store, Blockfrost/Charli3/Fluid API ready)
 - Jest + React Testing Library
 
 ---
@@ -160,6 +164,21 @@ For primary coalition endpoints (`/api/tvl`, `/api/utilization`, `/api/incentive
 - CMS decision log added at `.agent/tasks/cms-evaluation.md` (Git markdown selected for now)
 - Entity content ownership/removal policy model added and surfaced on `/entities`
 - `/admin` preview stub added (protected by proxy basic-auth guard when enabled)
+
+## Design Overhaul Highlights
+
+- **Hyper-modern Web3 aesthetic**: black/near-black gradient backgrounds, glassmorphism cards, glow effects
+- **Inter font** with bold headings, clean uppercase tracking for section labels
+- **Color system**: Blue (#007BFF) for USDM, Gold (#FFA500) for fGLD/yields, Green (#00FF88) for positive, Red (#FF4444) for alerts
+- **3D rotating globe** on Dashboard hero with entity nodes (Three.js / R3F)
+- **Particle background** (tsparticles) with subtle blockchain-inspired floating dots
+- **Animated TVL counter** with spring physics on the hero section
+- **Wallet connect** button in navbar with Eternl/Nami/Lace support (mock CIP-30)
+- **New `/wallet` page** with personal dashboard: positions, incentives earned, transaction history
+- **Framer Motion** throughout: fade-in animations, staggered lists, hover lifts, animated nav indicator
+- **Glassmorphic cards** across all pages with accent-colored borders and hover glow
+- **Web3 module stubs** in `src/web3/` ready for Lucid.js / Blockfrost integration
+- **`.env.example`** updated with Blockfrost, Charli3, Fluid API stubs
 
 This pattern is used across dashboard/blog/entities/incentives/comms/guides sections.
 

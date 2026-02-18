@@ -32,6 +32,11 @@
 **Root cause:** Content source migration without governance metadata leaves policy ambiguous across entities.
 **Rule:** Pair any CMS/content-source migration with a typed ownership model and a visible admin/policy surface.
 
+### 2026-02-18 — Design System Overhaul Across Existing Codebase
+**What happened:** Full aesthetic overhaul required touching every page/component while keeping existing data flow and tests intact.
+**Root cause:** Design tokens were scattered as inline classes; no centralized design system utilities.
+**Rule:** Centralize design primitives (glassmorphism, glow, accents) in globals.css as reusable utilities. Use dynamic imports + client wrappers for heavy 3D/animation libs to avoid SSR issues. Add IntersectionObserver polyfill to jest.setup when introducing Framer Motion `whileInView`.
+
 <!-- Example format:
 ### 2026-02-18 — [Context]
 **What happened:** ...

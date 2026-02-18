@@ -11,6 +11,7 @@ export const NAV_ITEMS = [
   { href: "/entities", label: "Entities" },
   { href: "/incentives", label: "Incentives" },
   { href: "/comms", label: "Comms" },
+  { href: "/wallet", label: "Wallet" },
 ];
 
 export const REFRESH_INTERVAL_MS = 5 * 60 * 1000;

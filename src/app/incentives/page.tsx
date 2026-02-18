@@ -12,8 +12,9 @@ export default function IncentivesPage() {
   return (
     <div className="space-y-8">
       <header>
-        <h1 className="text-3xl font-bold text-slate-100">Incentives</h1>
-        <p className="mt-2 text-slate-300">Kickback mechanics designed to subsidize borrowing and lending rates.</p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-green">Yield Programs</p>
+        <h1 className="mt-2 text-3xl font-bold text-foreground">Incentives</h1>
+        <p className="mt-2 text-sm text-(--text-secondary)">Kickback mechanics designed to subsidize borrowing and lending rates.</p>
       </header>
 
       <IncentivesDataSection />
@@ -29,7 +30,7 @@ export default function IncentivesPage() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-border bg-card p-5 text-sm text-(--text-secondary)">
+      <section className="rounded-2xl border border-white/8 bg-white/2 p-5 text-sm text-(--text-secondary) backdrop-blur-sm">
         <h2 className="text-lg font-semibold text-foreground">Gaming Prevention</h2>
         <p className="mt-2">Loyalty boosts assume a 30-day minimum holding period before bonus eligibility unlocks.</p>
       </section>

@@ -14,8 +14,9 @@ export default function BlogPage() {
   return (
     <div className="space-y-8">
       <header>
-        <h1 className="text-3xl font-bold text-slate-100">DeFi Pulse</h1>
-        <p className="mt-2 text-slate-300">Monthly coalition insights and phase-based progress reviews.</p>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-blue">Content Hub</p>
+        <h1 className="mt-2 text-3xl font-bold text-foreground">DeFi Pulse</h1>
+        <p className="mt-2 text-sm text-(--text-secondary)">Monthly coalition insights and phase-based progress reviews.</p>
       </header>
 
       <BlogDataSection />
@@ -26,7 +27,7 @@ export default function BlogPage() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-slate-100">Phased Reviews</h2>
+        <h2 className="text-xl font-bold text-foreground">Phased Reviews</h2>
         <DeFiPulseTimeline />
       </section>
     </div>
