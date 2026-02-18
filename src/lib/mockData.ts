@@ -138,7 +138,14 @@ export const timeline: TimelineMilestone[] = [
   },
 ];
 
-export const commsFeed = [
+export const commsFeed: Array<{
+  id: string;
+  kind: "video" | "x_space" | "article";
+  title: string;
+  description: string;
+  href: string;
+  date: string;
+}> = [
   {
     id: "mint-fluid-video",
     kind: "video",

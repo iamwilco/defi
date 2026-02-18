@@ -40,9 +40,22 @@ export function CommsFeed() {
 
       <div className="grid gap-4 md:grid-cols-2">
         {filtered.map((item) => (
-          <MediaEmbed key={item.id} title={item.title} description={`${item.description} (${item.date})`} href={item.href} />
+          <MediaEmbed
+            key={item.id}
+            title={item.title}
+            description={item.description}
+            href={item.href}
+            kind={item.kind}
+            date={item.date}
+          />
         ))}
       </div>
+
+      {filtered.length === 0 ? (
+        <p className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-300">
+          No communication entries match the current filter.
+        </p>
+      ) : null}
     </section>
   );
 }
