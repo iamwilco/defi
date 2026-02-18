@@ -3,10 +3,12 @@ import type {
   BlogPost,
   CoalitionContribution,
   CoalitionEntity,
+  ComingSoonTeaser,
   CommsFeedItem,
   GuideEntry,
   HeatmapCell,
   Incentive,
+  RecapHighlight,
   TimelineMilestone,
   TvlHistoryPoint,
 } from "@/types";
@@ -17,6 +19,44 @@ export const coalitionContributions: CoalitionContribution[] = [
   { id: "3", entity: "Moneta/W3I", asset: "USDM", tvl: 18000, lendingAmount: 6000, borrowingAmount: 3500 },
   { id: "4", entity: "Wave Capital", asset: "fGLD", tvl: 14000, lendingAmount: 4500, borrowingAmount: 2500 },
   { id: "5", entity: "LenFI", asset: "Night", tvl: 8500, lendingAmount: 3000, borrowingAmount: 2000 },
+];
+
+export const fourteenDayRecap: RecapHighlight[] = [
+  {
+    day: 1,
+    title: "Campaign Launch",
+    metricLabel: "Initial TVL",
+    metricValue: "$62.1K",
+    detail: "Launch communications synchronized across coalition channels.",
+  },
+  {
+    day: 4,
+    title: "Liquidity Sync",
+    metricLabel: "Transactions",
+    metricValue: "232",
+    detail: "Cross-entity liquidity pushes improved depth across early pairs.",
+  },
+  {
+    day: 8,
+    title: "Guide Adoption",
+    metricLabel: "Guide CTR",
+    metricValue: "38%",
+    detail: "Mint-to-Fluid content became the strongest conversion path.",
+  },
+  {
+    day: 12,
+    title: "Incentive Momentum",
+    metricLabel: "Active Boosts",
+    metricValue: "2",
+    detail: "Loyalty and Early Bird campaign mechanics drove sustained participation.",
+  },
+  {
+    day: 14,
+    title: "Recap Milestone",
+    metricLabel: "Total TVL",
+    metricValue: "$100.5K",
+    detail: "Coalition crossed six-figure TVL with stable utilization expansion.",
+  },
 ];
 
 export const assetUtilization: AssetUtilization[] = [
@@ -78,16 +118,30 @@ export const guidesCatalog: GuideEntry[] = [
   {
     id: "mint-fluid",
     title: "Mint to Fluid Journey",
-    body: "Mint USDM on NBX, transfer to wallet, and lend on Fluid. Video walkthrough placeholder included.",
-    steps: ["Mint USDM on NBX", "Move funds to a supported wallet", "Supply USDM to Fluid"],
+    body: "Mint USDM on NBX, route funds into your Cardano wallet, and deploy capital in Fluid with clear safety checks.",
+    steps: [
+      "Connect account and mint USDM on NBX",
+      "Move minted USDM into a supported non-custodial wallet",
+      "Open Fluid, connect wallet, and supply USDM",
+      "Review collateral and liquidation settings before any borrow action",
+    ],
     mediaLabel: "Video Placeholder: Mint to Fluid Walkthrough",
+    mediaType: "video",
+    mediaUrl: "#",
   },
   {
     id: "fgld-flow",
     title: "fGLD Flow: Buy gold on NBX, lend on Fluid",
-    body: "Acquire fGLD on NBX, deposit into Fluid markets, and monitor utilization/risk limits.",
-    steps: ["Acquire fGLD on NBX", "Supply fGLD to lending market", "Monitor utilization and rates"],
+    body: "Follow the full conversion path from NBX purchase to yield participation on Fluid markets.",
+    steps: [
+      "Buy fGLD on NBX during available market window",
+      "Move fGLD to your custodial or self-custody Cardano wallet",
+      "Bridge funds into the Fluid-connected wallet profile",
+      "Supply fGLD to lending pools and monitor utilization/rate shifts",
+    ],
     mediaLabel: "Diagram Placeholder: NBX -> Fluid fGLD Flow",
+    mediaType: "diagram",
+    mediaUrl: "#",
   },
   {
     id: "starter",
@@ -95,6 +149,44 @@ export const guidesCatalog: GuideEntry[] = [
     body: "Beginner path for stablecoin entry, lending setup, and campaign eligibility checks.",
     steps: ["Understand campaign terms", "Start with small test position", "Track rewards weekly"],
     mediaLabel: "Checklist Placeholder: Beginner onboarding",
+    mediaType: "checklist",
+  },
+  {
+    id: "dca-flow",
+    title: "USDM + fGLD DCA Flow",
+    body: "Build a recurring position with disciplined entries and periodic rebalance checks.",
+    steps: [
+      "Set your weekly DCA budget split between USDM and fGLD",
+      "Execute purchases on NBX at fixed intervals",
+      "Route assets to Fluid and adjust allocation monthly",
+      "Track campaign eligibility and rebalance if one leg drifts",
+    ],
+    mediaLabel: "Checklist Placeholder: DCA schedule and rebalance planner",
+    mediaType: "checklist",
+  },
+];
+
+export const comingSoonTeasers: ComingSoonTeaser[] = [
+  {
+    id: "flip-app",
+    title: "Flip App Campaign Rail",
+    description: "Unified campaign discovery and reward tracking for coalition incentive programs.",
+    target: "incentives",
+    eta: "Q2 2026",
+  },
+  {
+    id: "strike-integration",
+    title: "Strike Partner Integration",
+    description: "Partner onboarding module for new entities with shared liquidity visibility.",
+    target: "entities",
+    eta: "Q2 2026",
+  },
+  {
+    id: "institutional-pitch-kit",
+    title: "Institutional RWA Pitch Kit",
+    description: "Curated narrative and metrics package for institutional USDM growth conversations.",
+    target: "institutional",
+    eta: "Q3 2026",
   },
 ];
 

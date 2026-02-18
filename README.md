@@ -69,6 +69,7 @@ npm run test:watch # run Jest in watch mode
 - `/entities` — Coalition entities
 - `/incentives` — Incentive mechanics
 - `/comms` — Communications hub
+- `/institutional` — Institutional RWA narrative stub
 
 ---
 
@@ -112,6 +113,14 @@ For primary coalition endpoints (`/api/tvl`, `/api/utilization`, `/api/incentive
 - Query refetch intervals are now configurable and enabled automatically in live mode
 - Theme preference persistence via Zustand `persist`
 - Core layout/nav/sidebar/footer updated to use theme tokens for dark/light switching
+
+## Sprint 2 Highlights
+
+- Incentives page now includes a boost calculator with 30-day eligibility progress simulation
+- Incentive cards include explicit eligibility status labels
+- Coming Soon teasers added for incentives and entities, plus `/institutional` teaser route
+- Guides upgraded with embed-style media placeholders and expanded flow steps (including DCA path)
+- Blog now includes a phase infographic and a "14 Days of USDM" recap panel
 
 This pattern is used across dashboard/blog/entities/incentives/comms/guides sections.
 

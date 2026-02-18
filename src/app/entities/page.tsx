@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { EntitiesDataSection } from "@/components/entities/EntitiesDataSection";
+import { ComingSoonCard } from "@/components/shared/ComingSoonCard";
+import { comingSoonTeasers } from "@/lib/mockData";
 
 export const metadata: Metadata = {
   title: "Entities | USDM Coalition",
@@ -16,8 +18,19 @@ export default function EntitiesPage() {
 
       <EntitiesDataSection />
 
-      <section className="rounded-2xl border border-white/10 bg-slate-900/70 p-5 text-sm text-slate-300">
-        <h2 className="text-lg font-semibold text-slate-100">Joining / Leaving</h2>
+      <section className="space-y-3">
+        <h2 className="text-lg font-semibold text-foreground">Potential Partners</h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {comingSoonTeasers
+            .filter((item) => item.target === "entities")
+            .map((teaser) => (
+              <ComingSoonCard key={teaser.id} teaser={teaser} />
+            ))}
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-border bg-card p-5 text-sm text-(--text-secondary)">
+        <h2 className="text-lg font-semibold text-foreground">Joining / Leaving</h2>
         <p className="mt-2">
           Coalition participation follows transparent liquidity and communication principles. Historical
           contribution metrics remain visible even if entities leave.

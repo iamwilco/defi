@@ -45,38 +45,38 @@
 
 ### 2A: Boost Calculator / Incentive Simulator
 
-- [ ] **FB-040** Create `src/components/incentives/BoostCalculator.tsx` — client component with inputs: position size ($), hold duration (days), selected boost
-- [ ] **FB-041** Add calculation logic: estimated bonus yield = base rate × boost multiplier × (duration / 365)
-- [ ] **FB-042** Add visual output: projected earnings card with breakdown
-- [ ] **FB-043** Add gaming prevention timeline: progress bar showing 30-day hold requirement vs. user input
-- [ ] **FB-044** Add eligibility status indicator to each `IncentiveCard` (eligible / not yet / ineligible)
-- [ ] **FB-045** Wire `BoostCalculator` into `/incentives` page below the grid
-- [ ] **FB-046** Test: calculator renders and produces correct output for sample inputs
+- [x] **FB-040** Create `src/components/incentives/BoostCalculator.tsx` — client component with inputs: position size ($), hold duration (days), selected boost
+- [x] **FB-041** Add calculation logic: estimated bonus yield = base rate × boost multiplier × (duration / 365)
+- [x] **FB-042** Add visual output: projected earnings card with breakdown
+- [x] **FB-043** Add gaming prevention timeline: progress bar showing 30-day hold requirement vs. user input
+- [x] **FB-044** Add eligibility status indicator to each `IncentiveCard` (eligible / not yet / ineligible)
+- [x] **FB-045** Wire `BoostCalculator` into `/incentives` page below the grid
+- [x] **FB-046** Test: calculator renders and produces correct output for sample inputs
 
 ### 2B: Coming Soon Teasers
 
-- [ ] **FB-050** Create `src/components/shared/ComingSoonCard.tsx` — reusable teaser card (title, description, "Coming Soon" badge, optional icon)
-- [ ] **FB-051** Add teaser data to `mockData.ts`: Flip App, Strike integration, institutional RWA pitch
-- [ ] **FB-052** Add Coming Soon section to `/incentives` page (Flip App, future campaigns)
-- [ ] **FB-053** Add Coming Soon section to `/entities` page (Strike, potential partners)
-- [ ] **FB-054** Create `/institutional` stub page — RWA into Cardano narrative, oracle comparison placeholder
+- [x] **FB-050** Create `src/components/shared/ComingSoonCard.tsx` — reusable teaser card (title, description, "Coming Soon" badge, optional icon)
+- [x] **FB-051** Add teaser data to `mockData.ts`: Flip App, Strike integration, institutional RWA pitch
+- [x] **FB-052** Add Coming Soon section to `/incentives` page (Flip App, future campaigns)
+- [x] **FB-053** Add Coming Soon section to `/entities` page (Strike, potential partners)
+- [x] **FB-054** Create `/institutional` stub page — RWA into Cardano narrative, oracle comparison placeholder
 
 ### 2C: Guides — Richer Media & Content
 
-- [ ] **FB-060** Create `src/components/shared/EmbedPlaceholder.tsx` — thumbnail + title + "Watch" CTA, accepts `type` (video/diagram/checklist)
-- [ ] **FB-061** Replace `mediaLabel` text in `GuideAccordion` with `EmbedPlaceholder` component
-- [ ] **FB-062** Expand "fGLD Flow" guide steps: "Buy gold on NBX → custodial wallet → lend on Fluid" with granular sub-steps
-- [ ] **FB-063** Expand "Mint to Fluid Journey" guide with diagram placeholder and detailed walkthrough
-- [ ] **FB-064** Add DCA (Dollar Cost Averaging) guide entry to `guidesCatalog` in mock data
-- [ ] **FB-065** Update guide `GuideEntry` type to include optional `mediaType` and `mediaUrl` fields
+- [x] **FB-060** Create `src/components/shared/EmbedPlaceholder.tsx` — thumbnail + title + "Watch" CTA, accepts `type` (video/diagram/checklist)
+- [x] **FB-061** Replace `mediaLabel` text in `GuideAccordion` with `EmbedPlaceholder` component
+- [x] **FB-062** Expand "fGLD Flow" guide steps: "Buy gold on NBX → custodial wallet → lend on Fluid" with granular sub-steps
+- [x] **FB-063** Expand "Mint to Fluid Journey" guide with diagram placeholder and detailed walkthrough
+- [x] **FB-064** Add DCA (Dollar Cost Averaging) guide entry to `guidesCatalog` in mock data
+- [x] **FB-065** Update guide `GuideEntry` type to include optional `mediaType` and `mediaUrl` fields
 
 ### 2D: Phases Infographic / "14 Days of USDM"
 
-- [ ] **FB-070** Create `src/components/blog/PhasesInfographic.tsx` — Recharts-based visual timeline (horizontal bar or milestone chart)
-- [ ] **FB-071** Add phase progress indicators (progress bar per phase based on current date vs. start/end)
-- [ ] **FB-072** Create `src/components/blog/FourteenDaysRecap.tsx` — "14 Days of USDM" recap component with milestone cards, icons, and metric callouts
-- [ ] **FB-073** Wire infographic into `/blog` page alongside existing `DeFiPulseTimeline`
-- [ ] **FB-074** Add recap data to `mockData.ts` — daily highlights for Days 1-14
+- [x] **FB-070** Create `src/components/blog/PhasesInfographic.tsx` — Recharts-based visual timeline (horizontal bar or milestone chart)
+- [x] **FB-071** Add phase progress indicators (progress bar per phase based on current date vs. start/end)
+- [x] **FB-072** Create `src/components/blog/FourteenDaysRecap.tsx` — "14 Days of USDM" recap component with milestone cards, icons, and metric callouts
+- [x] **FB-073** Wire infographic into `/blog` page alongside existing `DeFiPulseTimeline`
+- [x] **FB-074** Add recap data to `mockData.ts` — daily highlights for Days 1-14
 
 ---
 
@@ -142,11 +142,11 @@
 
 These apply to every sprint:
 
-- [ ] **FB-X01** Run `npm run lint` after each sprint — zero warnings
-- [ ] **FB-X02** Run `npm test -- --runInBand` after each sprint — all pass
-- [ ] **FB-X03** Run `npm run build` after each sprint — clean production build
+- [x] **FB-X01** Run `npm run lint` after each sprint — zero warnings
+- [x] **FB-X02** Run `npm test -- --runInBand` after each sprint — all pass
+- [x] **FB-X03** Run `npm run build` after each sprint — clean production build
 - [ ] **FB-X04** Commit after each task group using Conventional Commits (`feat[scope]: ...`, `fix[scope]: ...`, `docs[scope]: ...`)
-- [ ] **FB-X05** Update `.agent/tasks/lessons.md` with any corrections or learnings
+- [x] **FB-X05** Update `.agent/tasks/lessons.md` with any corrections or learnings
 
 ---
 

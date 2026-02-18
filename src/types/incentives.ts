@@ -8,3 +8,11 @@ export interface Incentive {
   endDate: string;
   active: boolean;
 }
+
+export interface ComingSoonTeaser {
+  id: string;
+  title: string;
+  description: string;
+  target: "incentives" | "entities" | "institutional";
+  eta: string;
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import { IncentivesGrid } from "@/components/incentives/IncentivesGrid";
+import { BoostCalculator } from "@/components/incentives/BoostCalculator";
 import { ErrorFallback } from "@/components/shared/ErrorFallback";
 import { LoadingCard } from "@/components/shared/LoadingCard";
 import { useIncentives } from "@/lib/hooks/useIncentives";
@@ -22,5 +23,12 @@ export function IncentivesDataSection() {
     );
   }
 
-  return <IncentivesGrid incentives={[...data.active, ...data.upcoming]} />;
+  const incentives = [...data.active, ...data.upcoming];
+
+  return (
+    <div className="space-y-5">
+      <IncentivesGrid incentives={incentives} />
+      <BoostCalculator incentives={incentives} />
+    </div>
+  );
 }

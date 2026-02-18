@@ -17,6 +17,11 @@
 **Root cause:** Direct mock imports in API routes make phased migration harder and increase regression risk.
 **Rule:** Route handlers should resolve data via provider interfaces so mock/live source changes remain isolated from hooks and UI.
 
+### 2026-02-18 — Feature Slice Delivery for UI Expansions
+**What happened:** Sprint 2 required multiple cross-page enhancements (incentives, guides, blog, entities) under one delivery window.
+**Root cause:** Scattered component-only edits risk missing associated data/types/routes/tests updates.
+**Rule:** Ship feature slices end-to-end: update types + mock data + UI components + page wiring + regression tests + docs in one pass.
+
 <!-- Example format:
 ### 2026-02-18 — [Context]
 **What happened:** ...

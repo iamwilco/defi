@@ -34,4 +34,14 @@ export interface GuideEntry {
   body: string;
   steps: string[];
   mediaLabel: string;
+  mediaType?: "video" | "diagram" | "checklist";
+  mediaUrl?: string;
+}
+
+export interface RecapHighlight {
+  day: number;
+  title: string;
+  metricLabel: string;
+  metricValue: string;
+  detail: string;
 }
