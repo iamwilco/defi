@@ -84,9 +84,9 @@
 
 ### 3A: Accessibility & Performance Audit
 
-- [ ] **FB-080** Add skip-to-content link in `layout.tsx` (hidden, visible on focus)
-- [ ] **FB-081** Add `aria-label` or descriptive text alternatives to all Recharts charts
-- [ ] **FB-082** Convert entity logo placeholders to `next/image` with proper sizing
+- [x] **FB-080** Add skip-to-content link in `layout.tsx` (hidden, visible on focus)
+- [x] **FB-081** Add `aria-label` or descriptive text alternatives to all Recharts charts
+- [x] **FB-082** Convert entity logo placeholders to `next/image` with proper sizing
 - [ ] **FB-083** Run Lighthouse audit on all pages — document scores
 - [ ] **FB-084** Fix any Lighthouse a11y issues (contrast, labels, heading order)
 - [ ] **FB-085** Fix any Lighthouse performance issues (LCP, CLS, FID)
@@ -95,12 +95,12 @@
 
 ### 3B: Security Hardening
 
-- [ ] **FB-090** Add rate limiting to API routes (in-memory token bucket or `next-rate-limit`)
-- [ ] **FB-091** Add CORS headers to API routes (configurable allowed origins)
-- [ ] **FB-092** Add Content Security Policy headers in `next.config.js`
-- [ ] **FB-093** Add basic auth middleware stub for future `/admin` route
+- [x] **FB-090** Add rate limiting to API routes (in-memory token bucket or `next-rate-limit`)
+- [x] **FB-091** Add CORS headers to API routes (configurable allowed origins)
+- [x] **FB-092** Add Content Security Policy headers in `next.config.js`
+- [x] **FB-093** Add basic auth middleware stub for future `/admin` route
 - [ ] **FB-094** Run `npm audit` and fix any reported vulnerabilities
-- [ ] **FB-095** Verify `.env.local` is in `.gitignore` and no secrets are exposed
+- [x] **FB-095** Verify `.env.local` is in `.gitignore` and no secrets are exposed
 
 ### 3C: README & Documentation Polish
 
@@ -145,7 +145,7 @@ These apply to every sprint:
 - [x] **FB-X01** Run `npm run lint` after each sprint — zero warnings
 - [x] **FB-X02** Run `npm test -- --runInBand` after each sprint — all pass
 - [x] **FB-X03** Run `npm run build` after each sprint — clean production build
-- [ ] **FB-X04** Commit after each task group using Conventional Commits (`feat[scope]: ...`, `fix[scope]: ...`, `docs[scope]: ...`)
+- [x] **FB-X04** Commit after each task group using Conventional Commits (`feat[scope]: ...`, `fix[scope]: ...`, `docs[scope]: ...`)
 - [x] **FB-X05** Update `.agent/tasks/lessons.md` with any corrections or learnings
 
 ---

@@ -8,7 +8,7 @@ const COLORS = ["#3b82f6", "#f59e0b", "#10b981", "#22d3ee"];
 
 export function AssetUtilizationChart() {
   return (
-    <div className="h-72 w-full">
+    <div className="h-72 w-full" role="img" aria-label="Donut chart showing utilized amounts by asset">
       <ResponsiveContainer>
         <PieChart>
           <Pie data={assetUtilization} dataKey="utilized" nameKey="asset" outerRadius={100} label>

@@ -6,7 +6,7 @@ import { formatCurrency } from "@/lib/utils";
 
 export function TvlChart() {
   return (
-    <div className="h-72 w-full">
+    <div className="h-72 w-full" role="img" aria-label="Bar chart showing total USDM TVL by coalition entity">
       <ResponsiveContainer>
         <BarChart data={coalitionContributions}>
           <XAxis dataKey="entity" stroke="#94a3b8" tick={{ fontSize: 12 }} />

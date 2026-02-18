@@ -44,6 +44,10 @@ Defined in `.env.example`:
 - `NEXT_PUBLIC_DATA_MODE=mock`
   - `mock` (default): serves data from local mock provider
   - `live`: enables provider routing to live stubs (Blockfrost plumbing in place)
+- `ADMIN_BASIC_AUTH_ENABLED=false`
+- `ADMIN_BASIC_AUTH_USERNAME=`
+- `ADMIN_BASIC_AUTH_PASSWORD=`
+  - Reserved for `/admin` basic-auth middleware stub
 
 ---
 
@@ -121,6 +125,13 @@ For primary coalition endpoints (`/api/tvl`, `/api/utilization`, `/api/incentive
 - Coming Soon teasers added for incentives and entities, plus `/institutional` teaser route
 - Guides upgraded with embed-style media placeholders and expanded flow steps (including DCA path)
 - Blog now includes a phase infographic and a "14 Days of USDM" recap panel
+
+## Sprint 3 Highlights
+
+- Added skip-to-content link and explicit chart labels for improved keyboard/screen-reader accessibility
+- Added API route hardening helpers: per-route rate limiting and CORS headers
+- Added security headers in `next.config.ts` (CSP, frame/content/referrer/permissions policies)
+- Added middleware-based admin basic-auth guard stub for future `/admin` route
 
 This pattern is used across dashboard/blog/entities/incentives/comms/guides sections.
 

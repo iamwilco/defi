@@ -43,7 +43,7 @@ export function PhasesInfographic({ milestones }: PhasesInfographicProps) {
     <section className="rounded-2xl border border-border bg-card p-5">
       <h3 className="text-lg font-semibold text-foreground">Phase Infographic</h3>
       <p className="mt-1 text-sm text-(--text-secondary)">Duration-weighted view of campaign stages.</p>
-      <div className="mt-4 h-72 w-full">
+      <div className="mt-4 h-72 w-full" role="img" aria-label="Timeline chart of campaign phase durations">
         <ResponsiveContainer>
           <BarChart data={data} layout="vertical" margin={{ top: 10, right: 20, left: 20, bottom: 10 }}>
             <XAxis type="number" stroke="#64748b" tick={{ fontSize: 12 }} />

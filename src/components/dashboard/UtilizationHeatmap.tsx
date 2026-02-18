@@ -82,7 +82,7 @@ export function UtilizationHeatmap() {
   };
 
   return (
-    <section className="space-y-4" aria-label="Utilization heatmap by asset and metric">
+    <section className="space-y-4" role="img" aria-label="Utilization heatmap by asset and metric">
       <div className="flex flex-wrap gap-2">
         <button
           type="button"

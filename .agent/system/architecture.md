@@ -212,6 +212,8 @@ Component renders
 
 - API keys in `.env.local` only — never in client components.
 - API routes validate query params with Zod (Phase 2).
-- `next.config.js` security headers (CSP, X-Frame-Options, etc.).
+- `next.config.ts` enforces baseline security headers (CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy).
+- API routes now apply route-level in-memory rate limiting and CORS response headers via `src/lib/security/*` helpers.
+- `src/middleware.ts` includes a basic-auth guard stub for `/admin` routes, controlled by env flags.
 - No user auth in MVP — all routes public.
 - Content sanitization: `react-markdown` with `rehype-sanitize` for blog content.

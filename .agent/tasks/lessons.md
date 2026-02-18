@@ -22,6 +22,11 @@
 **Root cause:** Scattered component-only edits risk missing associated data/types/routes/tests updates.
 **Rule:** Ship feature slices end-to-end: update types + mock data + UI components + page wiring + regression tests + docs in one pass.
 
+### 2026-02-18 — API Hardening Consistency
+**What happened:** Security hardening touched every API route (rate limit, CORS, OPTIONS).
+**Root cause:** One-off route edits drift quickly and create inconsistent behavior across endpoints.
+**Rule:** Keep shared security behavior in `src/lib/security/*` utilities and apply uniformly across all route handlers.
+
 <!-- Example format:
 ### 2026-02-18 — [Context]
 **What happened:** ...
