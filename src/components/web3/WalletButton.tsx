@@ -26,14 +26,14 @@ export function WalletButton() {
 
   if (connected && address) {
     return (
-      <div className="relative">
+      <div className="relative min-w-0">
         <button
           type="button"
           onClick={() => setOpen((prev) => !prev)}
-          className="flex items-center gap-2 rounded-xl border border-accent-blue/30 bg-accent-blue/10 px-3 py-2 text-xs font-medium text-accent-blue transition hover:border-accent-blue/50 hover:shadow-[0_0_15px_rgba(0,123,255,0.2)]"
+          className="flex max-w-[150px] items-center gap-2 rounded-xl border border-accent-blue/30 bg-accent-blue/10 px-3 py-2 text-xs font-medium text-accent-blue transition hover:border-accent-blue/50 hover:shadow-[0_0_15px_rgba(0,123,255,0.2)]"
         >
           <span className="h-2 w-2 rounded-full bg-accent-green animate-pulse-glow" />
-          <span>{shortenAddress(address)}</span>
+          <span className="truncate">{shortenAddress(address)}</span>
           <ChevronDown className="h-3 w-3" />
         </button>
 
@@ -85,7 +85,7 @@ export function WalletButton() {
   }
 
   return (
-    <div className="relative">
+    <div className="relative min-w-0">
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
@@ -93,7 +93,7 @@ export function WalletButton() {
         className="flex items-center gap-2 rounded-xl border border-accent-blue/30 bg-accent-blue/10 px-3 py-2 text-xs font-medium text-accent-blue transition hover:border-accent-blue/50 hover:shadow-[0_0_15px_rgba(0,123,255,0.2)] disabled:opacity-50"
       >
         <Wallet className="h-3.5 w-3.5" />
-        {connecting ? "Connecting..." : "Connect Wallet"}
+        <span className="hidden min-[380px]:inline">{connecting ? "Connecting..." : "Connect Wallet"}</span>
       </button>
 
       <AnimatePresence>

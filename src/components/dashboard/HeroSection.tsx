@@ -41,7 +41,7 @@ export function HeroSection() {
           </FadeIn>
 
           <FadeIn delay={0.3}>
-            <div className="mt-8 flex flex-wrap items-end gap-6">
+            <div className="mt-8 flex flex-wrap items-end gap-4 sm:gap-6">
               <div>
                 <p className="text-[10px] font-medium uppercase tracking-wider text-(--text-muted)">Total Value Locked</p>
                 <AnimatedCounter
@@ -50,7 +50,7 @@ export function HeroSection() {
                   className="text-4xl font-bold text-accent-gold glow-gold-text"
                 />
               </div>
-              <div className="flex gap-3">
+              <div className="flex flex-wrap gap-3">
                 <Link
                   href="/blog/month-1-review"
                   className="rounded-xl border border-accent-blue/30 bg-accent-blue/10 px-5 py-2.5 text-sm font-medium text-accent-blue transition hover:bg-accent-blue/20 hover:shadow-[0_0_20px_rgba(0,123,255,0.2)]"
