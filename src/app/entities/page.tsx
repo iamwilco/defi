@@ -13,14 +13,16 @@ export default function EntitiesPage() {
     <div className="space-y-8">
       <header>
         <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-blue">Partners</p>
-        <h1 className="mt-2 text-3xl font-bold text-foreground">Coalition Entities</h1>
-        <p className="mt-2 text-sm text-(--text-secondary)">NBX, Fluid, Moneta/W3I, Wave Capital and partners powering Proof of Growth.</p>
+        <h1 className="mt-2 text-3xl font-bold text-foreground">Meet Our Coalition Crew</h1>
+        <p className="mt-2 text-sm text-(--text-secondary)">
+          From NBX to Wave Capital, we&apos;re the teams making USDM thrive on Cardano — real people driving real change.
+        </p>
       </header>
 
       <EntitiesDataSection />
 
       <section className="space-y-3">
-        <h2 className="text-lg font-semibold text-foreground">Potential Partners</h2>
+        <h2 className="text-lg font-semibold text-foreground">Who&apos;s Next?</h2>
         <div className="grid gap-4 md:grid-cols-2">
           {comingSoonTeasers
             .filter((item) => item.target === "entities")
@@ -31,18 +33,17 @@ export default function EntitiesPage() {
       </section>
 
       <section className="rounded-2xl border border-white/8 bg-white/2 p-5 text-sm text-(--text-secondary) backdrop-blur-sm">
-        <h2 className="text-lg font-semibold text-foreground">Joining / Leaving</h2>
+        <h2 className="text-lg font-semibold text-foreground">Want to Join or Step Back?</h2>
         <p className="mt-2">
-          Coalition participation follows transparent liquidity and communication principles. Historical
-          contribution metrics remain visible even if entities leave.
+          We keep things fair and open. Historical contribution metrics stay visible for transparency,
+          even if a partner decides to move on.
         </p>
       </section>
 
       <section className="rounded-2xl border border-white/8 bg-white/2 p-5 backdrop-blur-sm">
-        <h2 className="text-lg font-semibold text-foreground">Content Ownership Model</h2>
+        <h2 className="text-lg font-semibold text-foreground">Who Owns What?</h2>
         <p className="mt-2 text-sm text-(--text-secondary)">
-          Each coalition entity retains ownership of authored content and may request updates or removals through
-          the governance pathway listed below.
+          Each team controls their own content — here&apos;s the quickest way to request updates or removals.
         </p>
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full text-left text-xs text-(--text-secondary)">

@@ -19,7 +19,7 @@ const AssetUtilizationChart = dynamic(
 export function ClientChartsSection() {
   return (
     <section className="grid gap-4 xl:grid-cols-2">
-      <DashboardCard title="Total USDM TVL by Entity">
+      <DashboardCard title="How Each Team's Contributing to USDM Growth">
         <TvlChart />
       </DashboardCard>
 

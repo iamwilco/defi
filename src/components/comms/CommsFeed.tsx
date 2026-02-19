@@ -54,7 +54,7 @@ export function CommsFeed({ items }: { items: CommsFeedItem[] }) {
 
       {filtered.length === 0 ? (
         <p className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-300">
-          No communication entries match the current filter.
+          Nothing in this filter yet — try another tab to see the latest posts.
         </p>
       ) : null}
     </section>

@@ -15,7 +15,7 @@ export function DeFiPulseTimeline() {
     <section className="space-y-4">
       <div className="grid gap-3 rounded-xl border border-white/10 bg-slate-900/70 p-4 sm:grid-cols-2">
         <label className="text-xs text-slate-400">
-          Since
+          Start date
           <input
             type="date"
             value={since}
@@ -25,7 +25,7 @@ export function DeFiPulseTimeline() {
           />
         </label>
         <label className="text-xs text-slate-400">
-          Until
+          End date
           <input
             type="date"
             value={until}
@@ -38,7 +38,7 @@ export function DeFiPulseTimeline() {
 
       {filteredTimeline.length === 0 ? (
         <p className="rounded-xl border border-white/10 bg-slate-900/60 p-4 text-sm text-slate-300" role="status" aria-live="polite">
-          No phase milestones match this date window.
+          No milestones in this range yet — try widening your dates.
         </p>
       ) : (
         <ol className="space-y-4">

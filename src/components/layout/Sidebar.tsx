@@ -83,9 +83,10 @@ export function Sidebar() {
         )}
       </AnimatePresence>
 
-      {/* Desktop sidebar — persistent */}
+      {/* Desktop sidebar — reserve layout width + fixed panel */}
+      <div className={`hidden shrink-0 lg:block ${sidebarWidth}`} aria-hidden="true" />
       <aside
-        className={`sticky top-0 hidden h-screen shrink-0 border-r border-white/6 bg-black/40 backdrop-blur-xl transition-all duration-300 lg:flex lg:flex-col ${sidebarWidth}`}
+        className={`fixed inset-y-0 left-0 z-40 hidden border-r border-white/6 bg-black/40 backdrop-blur-xl transition-all duration-300 lg:flex lg:flex-col ${sidebarWidth}`}
       >
         <SidebarContent pathname={pathname} collapsed={collapsed} />
         <button

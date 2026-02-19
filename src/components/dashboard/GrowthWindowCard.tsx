@@ -64,16 +64,18 @@ export function GrowthWindowCard() {
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3">
-        <Metric title="Start TVL" value={formatCurrency(summary.start)} />
-        <Metric title="End TVL" value={formatCurrency(summary.end)} />
+        <Metric title="We Started At" value={formatCurrency(summary.start)} />
+        <Metric title="Where We Are Now" value={formatCurrency(summary.end)} />
         <Metric
-          title="Window Growth"
+          title="Now Up By"
           value={`${summary.delta >= 0 ? "+" : ""}${formatCurrency(summary.delta)}`}
           emphasis={summary.delta >= 0 ? "positive" : "negative"}
         />
       </div>
 
-      <p className="text-xs text-slate-400">Total transactions in range: {summary.txCount.toLocaleString("en-US")}</p>
+      <p className="text-xs text-slate-400">
+        With {summary.txCount.toLocaleString("en-US")} transactions — that&apos;s real activity from users like you.
+      </p>
     </div>
   );
 }

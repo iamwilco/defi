@@ -16,7 +16,7 @@ export function IncentivesOverview() {
       ))}
 
       <Link href="/incentives" className="inline-block text-sm font-medium text-blue-300 hover:text-blue-200">
-        View all incentive mechanics →
+        See all rewards and how to qualify →
       </Link>
     </div>
   );

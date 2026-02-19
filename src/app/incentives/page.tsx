@@ -13,8 +13,10 @@ export default function IncentivesPage() {
     <div className="space-y-8">
       <header>
         <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-green">Yield Programs</p>
-        <h1 className="mt-2 text-3xl font-bold text-foreground">Incentives</h1>
-        <p className="mt-2 text-sm text-(--text-secondary)">Kickback mechanics designed to subsidize borrowing and lending rates.</p>
+        <h1 className="mt-2 text-3xl font-bold text-foreground">Score Extra Rewards</h1>
+        <p className="mt-2 text-sm text-(--text-secondary)">
+          Our perks make borrowing and lending even better — think bonuses that put more in your pocket.
+        </p>
       </header>
 
       <IncentivesDataSection />
@@ -31,8 +33,8 @@ export default function IncentivesPage() {
       </section>
 
       <section className="rounded-2xl border border-white/8 bg-white/2 p-5 text-sm text-(--text-secondary) backdrop-blur-sm">
-        <h2 className="text-lg font-semibold text-foreground">Gaming Prevention</h2>
-        <p className="mt-2">Loyalty boosts assume a 30-day minimum holding period before bonus eligibility unlocks.</p>
+        <h2 className="text-lg font-semibold text-foreground">No Shortcuts Here</h2>
+        <p className="mt-2">Hold for 30 days to unlock loyalty bonuses — it keeps things fair for everyone.</p>
       </section>
     </div>
   );

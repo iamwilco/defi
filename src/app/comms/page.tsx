@@ -11,8 +11,10 @@ export default function CommsPage() {
     <div className="space-y-8">
       <header>
         <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-accent-gold">Channels</p>
-        <h1 className="mt-2 text-3xl font-bold text-foreground">Comms Hub</h1>
-        <p className="mt-2 text-sm text-(--text-secondary)">Recordings, updates, and minting/yield announcements from coalition channels.</p>
+        <h1 className="mt-2 text-3xl font-bold text-foreground">Stay in the Loop</h1>
+        <p className="mt-2 text-sm text-(--text-secondary)">
+          Catch our latest videos, updates, and tips straight from the coalition — all about minting, yields, and more.
+        </p>
       </header>
 
       {/* NBX Minting Banner with NBX brand color #beed5e */}
@@ -20,7 +22,9 @@ export default function CommsPage() {
         <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#beed5e]/15 blur-[60px]" />
         <div className="relative z-10">
           <h2 className="text-lg font-bold text-[#beed5e]">NBX Minting Banner</h2>
-          <p className="mt-2 text-(--text-secondary)">Mint USDM on <span className="font-semibold text-[#beed5e]">NBX</span> and route into Fluid opportunities for active campaign windows.</p>
+          <p className="mt-2 text-(--text-secondary)">
+            Mint USDM on <span className="font-semibold text-[#beed5e]">NBX</span> today, then hop over to Fluid for sweet yield chances during our campaigns.
+          </p>
           <a
             href="https://nbx.com"
             target="_blank"
@@ -34,46 +38,46 @@ export default function CommsPage() {
 
       <section className="grid gap-4 md:grid-cols-2">
         <article className="rounded-2xl border border-white/8 bg-white/2 p-5 backdrop-blur-sm">
-          <h2 className="text-lg font-bold text-foreground">Coalition Updates</h2>
+          <h2 className="text-lg font-bold text-foreground">Quick Weekly Wins</h2>
           <p className="mt-2 text-sm text-(--text-secondary)">
-            Weekly snapshots summarize TVL movement, top-performing campaigns, and contribution milestones.
+            We share the biggest wins each week, from TVL milestones to campaign moments that helped real users.
           </p>
           <ul className="mt-4 space-y-3">
             <li className="rounded-xl border border-white/6 bg-white/2 p-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-foreground">Week 2 Snapshot</span>
+                <span className="text-xs font-semibold text-foreground">Week 2 (Feb 14): We Hit $100K TVL!</span>
                 <span className="text-[10px] text-(--text-muted)">Feb 14, 2026</span>
               </div>
-              <p className="mt-1 text-xs text-(--text-secondary)">TVL crossed $100K. <span className="font-semibold text-[#beed5e]">NBX</span> minting volume up 34%. Fluid lending utilization steady at 65%. Early Bird Boost drove 48% of new deposits this week.</p>
+              <p className="mt-1 text-xs text-(--text-secondary)">TVL crossed $100K. <span className="font-semibold text-[#beed5e]">NBX</span> minting volume rose 34%, and Fluid utilization held strong at 65%. Thanks to all of you who joined early.</p>
             </li>
             <li className="rounded-xl border border-white/6 bg-white/2 p-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-foreground">Week 1 Snapshot</span>
+                <span className="text-xs font-semibold text-foreground">Week 1: Big Launch Energy</span>
                 <span className="text-[10px] text-(--text-muted)">Feb 7, 2026</span>
               </div>
-              <p className="mt-1 text-xs text-(--text-secondary)">Coalition launch week. Initial TVL at $62.1K across 4 entities. Moneta/W3I coordinated the first campaign push. <span className="font-semibold text-[#beed5e]">NBX</span> onboarded 120 new minters.</p>
+              <p className="mt-1 text-xs text-(--text-secondary)">We launched with $62.1K TVL across 4 entities. Moneta/W3I coordinated the first campaign push, and <span className="font-semibold text-[#beed5e]">NBX</span> onboarded 120 new minters.</p>
             </li>
             <li className="rounded-xl border border-white/6 bg-white/2 p-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-foreground">Pre-Launch Brief</span>
+                <span className="text-xs font-semibold text-foreground">Pre-Launch: Team Alignment</span>
                 <span className="text-[10px] text-(--text-muted)">Jan 30, 2026</span>
               </div>
-              <p className="mt-1 text-xs text-(--text-secondary)">Final alignment call between coalition entities. Campaign rails, content ownership, and incentive mechanics confirmed. Wave Capital committed growth capital allocation.</p>
+              <p className="mt-1 text-xs text-(--text-secondary)">Our teams aligned campaign rails, ownership rules, and incentives. Wave Capital also confirmed growth capital support to help us scale.</p>
             </li>
           </ul>
         </article>
         <article className="rounded-2xl border border-white/8 bg-white/2 p-5 backdrop-blur-sm">
-          <h2 className="text-lg font-bold text-foreground">Institutional Briefings</h2>
+          <h2 className="text-lg font-bold text-foreground">For the Pros: Our Briefs</h2>
           <p className="mt-2 text-sm text-(--text-secondary)">
-            Publish concise notes for partners evaluating USDM liquidity depth and reserve-backed confidence.
+            Short, practical notes for professional partners evaluating liquidity depth and reserve confidence.
           </p>
           <ul className="mt-4 space-y-3">
             <li className="rounded-xl border border-white/6 bg-white/2 p-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-foreground">USDM Reserve Transparency Note</span>
+                <span className="text-xs font-semibold text-foreground">USDM Reserves Check</span>
                 <span className="text-[10px] text-(--text-muted)">Feb 12, 2026</span>
               </div>
-              <p className="mt-1 text-xs text-(--text-secondary)">Third-party audit confirms 1:1 reserve backing for all circulating USDM. On-chain proof available via Cardano explorer. Institutional partners can verify reserves in real-time through the coalition dashboard.</p>
+              <p className="mt-1 text-xs text-(--text-secondary)">Audited and 1:1 backed. Partners can verify reserves anytime through the dashboard and on-chain references.</p>
             </li>
             <li className="rounded-xl border border-white/6 bg-white/2 p-3">
               <div className="flex items-center justify-between">

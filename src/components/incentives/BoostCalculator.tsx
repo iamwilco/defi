@@ -30,9 +30,9 @@ export function BoostCalculator({ incentives }: BoostCalculatorProps) {
 
   return (
     <section className="rounded-2xl border border-border bg-card p-5">
-      <h2 className="text-lg font-semibold text-foreground">Boost Calculator</h2>
+      <h2 className="text-lg font-semibold text-foreground">Try Our Reward Calculator</h2>
       <p className="mt-1 text-sm text-(--text-secondary)">
-        Estimate campaign bonus yield and track 30-day eligibility progress.
+        See how much extra you could earn and track your 30-day streak.
       </p>
 
       <div className="mt-4 grid gap-4 md:grid-cols-3">
@@ -94,7 +94,7 @@ export function BoostCalculator({ incentives }: BoostCalculatorProps) {
           />
         </div>
         <p className="mt-2 text-xs text-(--text-muted)">
-          {eligible ? "Eligible: 30-day threshold reached." : "Not yet eligible: hold at least 30 days."}
+          {eligible ? "You&apos;re eligible — 30-day streak reached." : "Almost there — hold for at least 30 days to unlock loyalty bonuses."}
         </p>
       </div>
     </section>

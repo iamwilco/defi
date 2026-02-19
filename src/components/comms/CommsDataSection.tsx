@@ -9,7 +9,7 @@ export function CommsDataSection() {
   const { data, isLoading, isError, refetch } = useCommsFeed();
 
   if (isLoading) {
-    return <LoadingCard label="Loading communication feed..." />;
+    return <LoadingCard label="Loading fresh updates from the coalition..." />;
   }
 
   if (isError || !data) {

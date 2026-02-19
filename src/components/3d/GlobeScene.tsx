@@ -18,7 +18,7 @@ function GlowingSphere() {
   return (
     <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.5}>
       <mesh ref={meshRef}>
-        <Sphere args={[1.8, 64, 64]}>
+        <Sphere args={[1.6, 64, 64]}>
           <meshStandardMaterial
             color="#007BFF"
             emissive="#007BFF"
@@ -31,15 +31,15 @@ function GlowingSphere() {
         </Sphere>
         {/* Outer glow ring */}
         <mesh>
-          <torusGeometry args={[2.2, 0.02, 16, 100]} />
+          <torusGeometry args={[2, 0.02, 16, 100]} />
           <meshBasicMaterial color="#007BFF" transparent opacity={0.4} />
         </mesh>
         <mesh rotation={[Math.PI / 3, 0, 0]}>
-          <torusGeometry args={[2.4, 0.015, 16, 100]} />
+          <torusGeometry args={[2.2, 0.015, 16, 100]} />
           <meshBasicMaterial color="#FFA500" transparent opacity={0.3} />
         </mesh>
         {/* Wireframe overlay */}
-        <Sphere args={[1.82, 32, 32]}>
+        <Sphere args={[1.62, 32, 32]}>
           <meshBasicMaterial wireframe color="#007BFF" transparent opacity={0.15} />
         </Sphere>
       </mesh>
@@ -76,7 +76,7 @@ export function GlobeScene({ className }: { className?: string }) {
   return (
     <div className={className}>
       <Canvas
-        camera={{ position: [0, 0, 5], fov: 45 }}
+        camera={{ position: [0, 0, 6.4], fov: 45 }}
         gl={{ alpha: true, antialias: true }}
         style={{ background: "transparent" }}
       >

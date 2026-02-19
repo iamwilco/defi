@@ -1,7 +1,7 @@
 ---
 slug: rwa-narrative-cardano
 title: RWA on Cardano: Why USDM Matters
-excerpt: Institutional framing for stablecoin liquidity and on-chain credit rails.
+excerpt: A clear institutional view of stablecoin liquidity and on-chain credit rails.
 author: Wave Capital Research
 entity: Wave Capital
 date: 2026-02-10
@@ -10,10 +10,10 @@ phase: 2
 ---
 ## Institutional Angle
 
-USDM is not just a stablecoin unit — it is settlement infrastructure for RWA flows on Cardano.
+USDM is more than a stablecoin unit — it helps power reliable settlement for RWA activity on Cardano.
 
 Key lens:
 
 - reliability
 - composability
-- proof-driven communications
+- transparent, proof-driven communications

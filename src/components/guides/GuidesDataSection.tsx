@@ -9,7 +9,7 @@ export function GuidesDataSection() {
   const { data, isLoading, isError, refetch } = useGuides();
 
   if (isLoading) {
-    return <LoadingCard label="Loading guides catalog..." />;
+    return <LoadingCard label="Ready to dive in? Loading your guides..." />;
   }
 
   if (isError || !data) {

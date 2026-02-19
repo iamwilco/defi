@@ -9,14 +9,14 @@ export function BlogDataSection() {
   const { data, isLoading, isError, refetch } = useBlogPosts();
 
   if (isLoading) {
-    return <LoadingCard label="Loading DeFi Pulse posts..." />;
+    return <LoadingCard label="Loading this month’s coalition stories..." />;
   }
 
   if (isError || !data) {
     return (
       <ErrorFallback
         title="Unable to load blog posts"
-        message="The blog API is currently unavailable. Try again shortly."
+        message="Our story feed is taking a quick breather. Try again in a moment."
         onRetry={() => void refetch()}
       />
     );

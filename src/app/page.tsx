@@ -16,7 +16,7 @@ export default function Home() {
       <ClientChartsSection />
 
       <section className="grid gap-4 xl:grid-cols-2">
-        <DashboardCard title="Growth Window Insights">
+        <DashboardCard title="See How We're Growing">
           <GrowthWindowCard />
         </DashboardCard>
 
@@ -26,21 +26,21 @@ export default function Home() {
       </section>
 
       <section className="grid gap-4 xl:grid-cols-2">
-        <DashboardCard title="Coalition Contributions">
+        <DashboardCard title="Our Team's Contributions">
           <ContributionsTable />
         </DashboardCard>
 
-        <DashboardCard title="Utilization Heatmap">
+        <DashboardCard title="Hot Spots: Where USDM Is Buzzing Right Now">
           <ClientHeatmapSection />
         </DashboardCard>
       </section>
 
       <section className="grid gap-4 xl:grid-cols-2">
-        <DashboardCard title="Ongoing Incentives">
+        <DashboardCard title="Grab These Rewards Before They're Gone!">
           <IncentivesOverview />
         </DashboardCard>
 
-        <DashboardCard title="Proof of Reserves">
+        <DashboardCard title="Proof We're Solid">
           <ProofOfReserves />
         </DashboardCard>
       </section>
