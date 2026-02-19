@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -10,6 +11,11 @@ export function Footer() {
             <p className="mt-2 text-xs leading-relaxed text-(--text-muted)">
               Moneta/W3I • NBX • Fluid • Wave Capital — powering DeFi Proof of Growth on Cardano.
             </p>
+            <div className="mt-3 flex items-center gap-3">
+              <Image src="/logos/moneta-logo.png" alt="Moneta logo" width={64} height={20} className="h-5 w-auto object-contain" />
+              <Image src="/logos/nbx-logo.png" alt="NBX logo" width={48} height={20} className="h-5 w-auto object-contain" />
+              <Image src="/logos/fluid-logo.png" alt="Fluid logo" width={56} height={20} className="h-5 w-auto object-contain" />
+            </div>
           </div>
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-wider text-accent-gold">Content Ownership</h3>

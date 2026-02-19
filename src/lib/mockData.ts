@@ -287,7 +287,7 @@ export const entities: CoalitionEntity[] = [
   {
     id: "nbx",
     name: "NBX",
-    logo: "/logos/nbx.svg",
+    logo: "/logos/nbx-logo.png",
     description: "Your entry point to mint and exchange USDM, plus explore real-world asset tokens with confidence.",
     website: "https://nbx.com",
     role: "Exchange + Mint",
@@ -295,7 +295,7 @@ export const entities: CoalitionEntity[] = [
   {
     id: "fluid",
     name: "Fluid",
-    logo: "/logos/fluid.svg",
+    logo: "/logos/fluid-logo.png",
     description: "Where users lend and borrow USDM with simple flows, clear rates, and active coalition liquidity.",
     website: "https://fluidtokens.com",
     role: "Lending Protocol",
@@ -303,7 +303,7 @@ export const entities: CoalitionEntity[] = [
   {
     id: "moneta",
     name: "Moneta / W3I",
-    logo: "/logos/moneta.svg",
+    logo: "/logos/moneta-logo.png",
     description: "The team behind USDM issuance and coalition coordination, helping everyone move in sync.",
     website: "https://moneta.global/",
     role: "Issuer",

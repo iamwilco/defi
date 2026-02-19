@@ -1,8 +1,16 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import type { BlogPost } from "@/types";
+
+const ENTITY_LOGOS: Record<string, string> = {
+  NBX: "/logos/nbx-logo.png",
+  Fluid: "/logos/fluid-logo.png",
+  "Moneta/W3I": "/logos/moneta-logo.png",
+  "Moneta / W3I": "/logos/moneta-logo.png",
+};
 
 const phaseColors = {
   1: "border-accent-blue/20 hover:border-accent-blue/40",
@@ -23,7 +31,12 @@ export function BlogCard({ post }: { post: BlogPost }) {
       className={`group rounded-2xl border bg-white/2 p-5 backdrop-blur-sm transition-all duration-300 ${phaseColors[post.phase]}`}
     >
       <div className="flex items-center justify-between">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-accent-blue">{post.entity}</p>
+        <p className="flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-accent-blue">
+          {ENTITY_LOGOS[post.entity] ? (
+            <Image src={ENTITY_LOGOS[post.entity]} alt={`${post.entity} logo`} width={14} height={14} className="rounded-sm" />
+          ) : null}
+          <span>{post.entity}</span>
+        </p>
         <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${phaseBadgeColors[post.phase]}`}>
           Phase {post.phase}
         </span>
